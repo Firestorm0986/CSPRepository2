@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Title",
-            "content": ". toc: true layout: post description: Using Print Function, Again and Again categories: [markdown] title: Use Of Jupiter Notebooks author: Aditya Ajay Nawandhar show_tags: true . comments: true . Using The Print Function . Doing the same in a Jupiter Notebook . print (&quot;Hello World&quot;) . Hello World . Using The Function Agian . I don&#39;t know why, jsut using the Print function seems fun. . print (&quot;Hello World n &quot; * 5) . Hello World Hello World Hello World Hello World Hello World . Using the Print Function Some More . Help I guess . phrase = &quot;python is great&quot; print(f&quot;{phrase[7]}&#39;m {phrase[10:]}&quot;) . i&#39;m great .",
-            "url": "https://firestorm0986.github.io/CSPrepository2/2022/08/22/My-first-Jupiternotebook.html",
-            "relUrl": "/2022/08/22/My-first-Jupiternotebook.html",
+            "title": "My First Jupyter Notebook",
+            "content": "Using The Print Function . Doing the same in a Jupiter Notebook . print (&quot;Hello World&quot;) . Hello World . Using The Function Agian . I don&#39;t know why, just using the Print function seems fun. . print (&quot;Hello World n &quot; * 5) . Hello World Hello World Hello World Hello World Hello World . Using the Print Function Some More . Help I guess . phrase = &quot;python is great&quot; print(f&quot;{phrase[7]}&#39;m {phrase[10:]}&quot;) . i&#39;m great .",
+            "url": "https://firestorm0986.github.io/CSPrepository2/jupyter/2022/08/22/My-first-Jupiternotebook.html",
+            "relUrl": "/jupyter/2022/08/22/My-first-Jupiternotebook.html",
             "date": " • Aug 22, 2022"
         }
         
