@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Hello APCSP, Blog Post",
-            "content": "Hello APCSP . My first blog post and I am already excited by how this works. I hope to see and learn more things like this in the future. . My Class Goals . Learn how to work well with a team. | Learn how to code and create websites. | Learn how to manage my time better. | Learn how to create various features with coding. | Learn a new skill and increase my knowledge. | . . Something I Like . My favorite Video . . Some Basic Coding I learned . code num1 = input(‘Enter first number: ‘) num2 = input(‘Enter second number: ‘) sum = float(num1) + float(num2) print(‘The sum of {0} and {1} is {2}’.format(num1, num2, sum)) .",
+            "content": "Hello APCSP . My first blog post and I am already excited by how this works. I hope to see and learn more things like this in the future. . . My Class Goals . Learn how to work well with a team. | Learn how to code and create websites. | Learn how to manage my time better. | Learn how to create various features with coding. | Learn a new skill and increase my knowledge. | . . Something I Like . My favorite Video . . Some Basic Coding I learned . code num1 = input(‘Enter first number: ‘) num2 = input(‘Enter second number: ‘) sum = float(num1) + float(num2) print(‘The sum of {0} and {1} is {2}’.format(num1, num2, sum)) .",
             "url": "https://firestorm0986.github.io/CSPrepository2/markdown/2022/08/21/My-First-Blog-Post.html",
             "relUrl": "/markdown/2022/08/21/My-First-Blog-Post.html",
             "date": " • Aug 21, 2022"
