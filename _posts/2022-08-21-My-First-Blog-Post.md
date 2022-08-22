@@ -27,8 +27,7 @@ My first blog post and I am already excited by how this works. I hope to see and
 # Some Basic Coding I learned # 
 
 `code`
-num1 = input('Enter first number: ')
-num2 = input('Enter second number: ')
-sum = float(num1) + float(num2)
-print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
-`code`
+    num1 = input('Enter first number: ')
+    num2 = input('Enter second number: ')
+    sum = float(num1) + float(num2)
+    print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
