@@ -8,8 +8,8 @@ author: Aditya Ajay Nawnadhar
 show_tags: true
 comments: true
 ---
-**### Hello APCSP**
-MY first blog post and I am already excited by how this works. I hope to see and learn more things like this in the future.
+### Hello APCSP ###
+My first blog post and I am already excited by how this works. I hope to see and learn more things like this in the future.
 ## My Class Goals ##
 - Learn how to work well with a team.
 - Learn how to code and create websites.
@@ -17,7 +17,7 @@ MY first blog post and I am already excited by how this works. I hope to see and
 - Learn how to create various features with coding.
 - Learn a new skill and increase my knowledge.
 # Some Basic Coding I learned # 
-
+`code`
 # Store input numbers
 num1 = input('Enter first number: ')
 num2 = input('Enter second number: ')
@@ -27,6 +27,6 @@ sum = float(num1) + float(num2)
 
 # Display the sum
 print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
-
+`code`
 # Something I Like #
-[My favorite Video](https://www.youtube.com/watch?v=oHg5SJYRHA0) 
+[My favorite Video](https://www.youtube.com/watch?v=oHg5SJYRHA0)
