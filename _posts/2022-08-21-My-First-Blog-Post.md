@@ -7,6 +7,7 @@ title: Hello APCSP, Blog Post
 author: Aditya Ajay Nawnadhar
 show_tags: true
 comments: true
+image: images/markdown.png
 ---
 # Hello APCSP ###
 My first blog post and I am already excited by how this works. I hope to see and learn more things like this in the future.
