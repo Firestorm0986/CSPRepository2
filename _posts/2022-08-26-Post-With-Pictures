@@ -13,8 +13,14 @@ image: images/markdown.png
 ## Image Number - 1
 ![]({{ site.baseurl }}/images/postimage.png)
 
+---
+
 ## Image Number - 2
 ![]({{ site.baseurl }}/images/postimage2.png)
 
+---
+
 ## Image Number - 3
 ![]({{ site.baseurl }}/images/postimage3.png)
+
+---
