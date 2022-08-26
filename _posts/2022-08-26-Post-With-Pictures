@@ -7,8 +7,9 @@ title: Post With Pictures
 author: Aditya Ajay Nawnadhar
 show_tags: true
 comments: true
-image: images/markdown.png
 ---
+
+# Some Images -
 
 ## Image Number - 1
 ![]({{ site.baseurl }}/images/postimage.png)
