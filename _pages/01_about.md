@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-![]({{ sitebaseurl }}/images/mybrand.png)
+![]({{ site.baseurl }}/images/mybrand.png)
 
 This website is powered by Aditya Ajay Nawandhar.
 I love playing soccer and also love to hang out with my friends.
