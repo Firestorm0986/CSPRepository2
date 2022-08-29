@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Python Quiz | MyPortfolio - Aditya</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Python Quiz" />
+<meta name="author" content="Aditya Ajay Nawandhar" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Pythong Quiz in 3 diffrent ways" />
+<meta property="og:description" content="Pythong Quiz in 3 diffrent ways" />
+<link rel="canonical" href="https://firestorm0986.github.io/CSPrepository2/jupyter/2022/08/28/Python-Quiz.html" />
+<meta property="og:url" content="https://firestorm0986.github.io/CSPrepository2/jupyter/2022/08/28/Python-Quiz.html" />
+<meta property="og:site_name" content="MyPortfolio - Aditya" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-28T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Python Quiz" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aditya Ajay Nawandhar"},"dateModified":"2022-08-28T00:00:00-05:00","datePublished":"2022-08-28T00:00:00-05:00","description":"Pythong Quiz in 3 diffrent ways","headline":"Python Quiz","mainEntityOfPage":{"@type":"WebPage","@id":"https://firestorm0986.github.io/CSPrepository2/jupyter/2022/08/28/Python-Quiz.html"},"url":"https://firestorm0986.github.io/CSPrepository2/jupyter/2022/08/28/Python-Quiz.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CSPrepository2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://firestorm0986.github.io/CSPrepository2/feed.xml" title="MyPortfolio - Aditya" /><link rel="shortcut icon" type="image/x-icon" href="/CSPrepository2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/CSPrepository2/">MyPortfolio - Aditya</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/CSPrepository2/about/">About Me</a><a class="page-link" href="/CSPrepository2/_pages/02_2022-08-24-notes.html">Notes</a><a class="page-link" href="/CSPrepository2/search/">Search</a><a class="page-link" href="/CSPrepository2/categories/">Tags</a><a class="page-link" href="/CSPrepository2/_pages/05_2022-08-27-Physics.html">Physics</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Python Quiz</h1><p class="page-description">Pythong Quiz in 3 diffrent ways</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-28T00:00:00-05:00" itemprop="datePublished">
+        Aug 28, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Aditya Ajay Nawandhar</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/CSPrepository2/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Firestorm0986/CSPrepository2/tree/master/_notebooks/2022-08-28-Python-Quiz.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/CSPrepository2/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Firestorm0986/CSPrepository2/master?filepath=_notebooks%2F2022-08-28-Python-Quiz.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSPrepository2/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Firestorm0986/CSPrepository2/blob/master/_notebooks/2022-08-28-Python-Quiz.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSPrepository2/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FFirestorm0986%2FCSPrepository2%2Fblob%2Fmaster%2F_notebooks%2F2022-08-28-Python-Quiz.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/CSPrepository2/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Pthon-Quiz-metod---1">Pthon Quiz metod - 1 </a></li>
+<li class="toc-entry toc-h2"><a href="#Python-Quiz-Method---2">Python Quiz Method - 2 </a></li>
+<li class="toc-entry toc-h2"><a href="#Python-Quiz-Method---3">Python Quiz Method - 3 </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-08-28-Python-Quiz.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pthon-Quiz-metod---1">
+<a class="anchor" href="#Pthon-Quiz-metod---1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pthon Quiz metod - 1<a class="anchor-link" href="#Pthon-Quiz-metod---1"> </a>
+</h2>
+<p>copied from the APCSP repository</p>
+<p>This example defines a new function "question_with_response", this function returns a value input by the user. This allows programmer to evaluate the response. The purpose of obtaining the return value is to evaluate if correct response was given to the question.</p>
+<ul>
+<li>response from "question_with_response" is captured in a variable called "rsp"<ul>
+<li>return command in function returns msg input by user</li>
+<li>assignment to "rsp" is allowed a function is returning a value, names do not need to match (but could)</li>
+</ul>
+</li>
+<li>if command is next command in sequence after "rsp" assignment<ul>
+<li>this command contains an expression, rsp == "import" which compare what is typed to the string literal answer</li>
+<li>an if expression is evaluated for true or false</li>
+<li>true takes branch of code directly under if</li>
+<li>false takes branch of code directly under else command</li>
+</ul>
+</li>
+</ul>
+<p>The grand finale of this example is calculating the right/total.</p>
+<ul>
+<li>question = 3 is defined as number of questions</li>
+<li>correct = 0 is defined as running score</li>
+<li>correct += 1 is the way to add one to the score, this code is placed in sequence under correct expression evaluation</li>
+<li>since question and correct are numbers, versus strings, to place them in concatenation in print statements you must inclose them in Python function str() which turns number into string.</li>
+<li>final print statement is concatenated and formatted to give user and right over wrong</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">msg</span>
+
+<span class="n">questions</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Hello, '</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" running "</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You will be asked "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" questions."</span><span class="p">)</span>
+<span class="n">question_and_answer</span><span class="p">(</span><span class="s2">"Are you ready to take a test?"</span><span class="p">)</span>
+
+<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">"What command is used to include other functions that were previously developed?"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">"import"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is correct!"</span><span class="p">)</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is incorrect!"</span><span class="p">)</span>
+
+<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">"What command is used to evaluate correct or incorrect response in this example?"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">"if"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is correct!"</span><span class="p">)</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is incorrect!"</span><span class="p">)</span>
+
+<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">"Each 'if' command contains an '_________' to determine a true or false condition?"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">"expression"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is correct!"</span><span class="p">)</span>
+    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">" is incorrect!"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" you scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Python-Quiz-Method---2">
+<a class="anchor" href="#Python-Quiz-Method---2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python Quiz Method - 2<a class="anchor-link" href="#Python-Quiz-Method---2"> </a>
+</h2>
+<p>In this example a new function is defined "quiz" and then after the parameters of the function are defined. Lastly the code prints the score from the quiz.</p>
+<ul>
+<li>The parameters of the function are "que" and "ans". </li>
+<li>The function first prints the ques which is defined in code after the function definition. </li>
+<li>Then the variable "correct" is modified to be used outside of the current scope, whit this we can make changes to variable and print the variable in local context.</li>
+<li>the variable "input_ans" is attached to the user input for the aswers for the questions.</li>
+<li>"if" and "else" statems follow, the if statement prints "You got it right!!" if you get it right. and the else prints "Your answer is wrong" if you answer wrong.  </li>
+<li>correct is gven the value 0 becuase score starts from 0 . Correct += 1 is the way to add one to the score, this code is placed in sequence under correct expression evaluation. in this that case after the if statement.</li>
+<li>the Function is now defined </li>
+</ul>
+<p>After the function gets defined</p>
+<ul>
+<li>a variable questions is given the value of the number of questions present in the question</li>
+<li>After this the function parameters are defined with the questions and answers</li>
+<li>Last line of code is to print the score </li>
+<li>since question and correct are numbers, versus strings, to place them in concatenation in print statements you must inclose them in Python function str() which turns number into string.</li>
+<li>final print statement is concatenated and formatted to give user and right over wrong.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">quiz</span><span class="p">(</span><span class="n">ques</span><span class="p">,</span> <span class="n">ans</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ques</span><span class="p">)</span>
+    <span class="k">global</span> <span class="n">correct</span> <span class="c1">#global keyword allows you to modify the variable outside of the current scope</span>
+    <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="n">input_ans</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Answer: "</span><span class="p">)</span> <span class="c1"># user input</span>
+    <span class="k">if</span> <span class="n">ans</span> <span class="o">==</span> <span class="n">input_ans</span><span class="p">:</span> <span class="c1"># if the answer provided is correct</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"You got it right!!"</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># if the answer provided is wrong</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Your answer was wrong"</span><span class="p">)</span>
+
+<span class="n">questions</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># number of questions</span>
+
+<span class="n">quiz</span><span class="p">(</span><span class="s2">"my name is?"</span><span class="p">,</span> <span class="s2">"Aditya"</span><span class="p">)</span> <span class="c1"># defining the quiz function parameters</span>
+<span class="n">quiz</span><span class="p">(</span><span class="s2">"What is my age?"</span><span class="p">,</span> <span class="s2">"16"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="c1"># outputing the user's score</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Python-Quiz-Method---3">
+<a class="anchor" href="#Python-Quiz-Method---3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python Quiz Method - 3<a class="anchor-link" href="#Python-Quiz-Method---3"> </a>
+</h2>
+<p>In this example the function is first defined</p>
+<p>Then the word variable is given the value of blank or nothing</p>
+<p>Then the variable questions is given the value of the number of questions.</p>
+<p>After that Then the variable "correct" is modified to be used outside of the current scope, whit this we can make changes to variable and print the variable in local context.correct is gven the value 0 becuase score starts from 0 . Correct += 1 is the way to add one to the score, this code is placed in sequence under correct expression evaluation. in this that case after the if statement.</p>
+<p>Then the question and their corresponding answers are put in a dictionary. one question and it's answer is one value in the dictionary.</p>
+<p>After that a for statement is made for the two things in one value in the dictionarie to go through the code blelow until the leght of the dictionary finishes.</p>
+<ul>
+<li>the .items commnad itterates over every value in the dictionary</li>
+<li>we then use the "question_with_response" function to print the questions for the quiz and the parameter of this function is tied to question variable that connects to the dictionary.</li>
+<li>"if" and "else" statems follow, the if statement prints "You got it right!!" if you get it right. and the else prints "Your answer is wrong" if you answer wrong.</li>
+</ul>
+<p>The last line of the code is to print the score</p>
+<ul>
+<li>since question and correct are numbers, versus strings, to place them in concatenation in print statements you must inclose them in Python function str() which turns number into string.</li>
+<li>final print statement is concatenated and formatted to give user and right over wrong.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span> 
+
+
+
+<span class="n">word</span> <span class="o">=</span> <span class="s2">" "</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># number of questions</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">questions_answers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"What is my name?"</span> <span class="p">:</span> <span class="s2">"Aditya"</span><span class="p">,</span> 
+                     <span class="s2">"what is my age"</span> <span class="p">:</span> <span class="s2">"16"</span><span class="p">,</span> 
+                     <span class="s2">"what is my favorite sport?"</span> <span class="p">:</span> <span class="s2">"soccer"</span><span class="p">}</span> <span class="c1"># dictionary</span>
+
+<span class="k">for</span> <span class="n">question</span><span class="p">,</span> <span class="n">answer</span> <span class="ow">in</span> <span class="n">questions_answers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">question_with_response</span><span class="p">(</span><span class="n">question</span><span class="p">)</span> <span class="c1"># printing the questions</span>
+    <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Answe: "</span><span class="p">)</span> <span class="c1"># variable that connects to the user's input</span>
+    <span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>  <span class="c1"># if the answer provided is correct</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"You got it right!!"</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># if the answer provided is wrong</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Your answer was wrong"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">questions_answers</span><span class="p">)))</span> <span class="c1"># correct/len(questions_answers) </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Firestorm0986/CSPrepository2"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/CSPrepository2/jupyter/2022/08/28/Python-Quiz.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CSPrepository2/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/CSPrepository2/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CSPrepository2/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My Portfolio for APCSP</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/firestorm0986" target="_blank" title="firestorm0986"><svg class="svg-icon grey"><use xlink:href="/CSPrepository2/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
