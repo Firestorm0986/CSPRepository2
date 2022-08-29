@@ -14,12 +14,14 @@
 <link rel="canonical" href="https://firestorm0986.github.io/CSPrepository2/hacks/2022/08/28/Tool-checks.html" />
 <meta property="og:url" content="https://firestorm0986.github.io/CSPrepository2/hacks/2022/08/28/Tool-checks.html" />
 <meta property="og:site_name" content="MyPortfolio - Aditya" />
+<meta property="og:image" content="https://firestorm0986.github.io/CSPrepository2/images/jbCNvTM4gwr2qV8X8fW3ZB.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-08-28T00:00:00-05:00" />
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://firestorm0986.github.io/CSPrepository2/images/jbCNvTM4gwr2qV8X8fW3ZB.png" />
 <meta property="twitter:title" content="Tools Check" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aditya Ajay Nawandhar"},"dateModified":"2022-08-28T00:00:00-05:00","datePublished":"2022-08-28T00:00:00-05:00","description":"Tools checking","headline":"Tools Check","mainEntityOfPage":{"@type":"WebPage","@id":"https://firestorm0986.github.io/CSPrepository2/hacks/2022/08/28/Tool-checks.html"},"url":"https://firestorm0986.github.io/CSPrepository2/hacks/2022/08/28/Tool-checks.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aditya Ajay Nawandhar"},"dateModified":"2022-08-28T00:00:00-05:00","datePublished":"2022-08-28T00:00:00-05:00","description":"Tools checking","headline":"Tools Check","image":"https://firestorm0986.github.io/CSPrepository2/images/jbCNvTM4gwr2qV8X8fW3ZB.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://firestorm0986.github.io/CSPrepository2/hacks/2022/08/28/Tool-checks.html"},"url":"https://firestorm0986.github.io/CSPrepository2/hacks/2022/08/28/Tool-checks.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CSPrepository2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://firestorm0986.github.io/CSPrepository2/feed.xml" title="MyPortfolio - Aditya" /><link rel="shortcut icon" type="image/x-icon" href="/CSPrepository2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -155,8 +157,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>python --version
-python2 --version
+<div class=" highlight hl-python"><pre><span></span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">python2</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 
     </div>
@@ -188,7 +190,7 @@ Python 2.7.18
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>conda list
+<div class=" highlight hl-python"><pre><span></span><span class="n">conda</span> <span class="nb">list</span>
 </pre></div>
 
     </div>
@@ -655,18 +657,18 @@ zstd                      1.4.9                haebb681_0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span><span class="nb">echo</span> Conda Check
+<div class=" highlight hl-python"><pre><span></span><span class="n">echo</span> <span class="n">Conda</span> <span class="n">Check</span>
 <span class="c1"># test for a kernel installation</span>
-<span class="nv">test</span><span class="o">=</span><span class="s2">"jupyter"</span> <span class="c1"># keyword</span>
-<span class="nv">check</span><span class="o">=</span><span class="sb">`</span>conda list <span class="p">|</span> grep <span class="nv">$test</span><span class="sb">`</span> <span class="c1"># run command</span>
-<span class="nv">n</span><span class="o">=</span><span class="si">${#</span><span class="nv">check</span><span class="si">}</span> <span class="c1"># determine length</span>
+<span class="n">test</span><span class="o">=</span><span class="s2">"jupyter"</span> <span class="c1"># keyword</span>
+<span class="n">check</span><span class="o">=</span><span class="err">`</span><span class="n">conda</span> <span class="nb">list</span> <span class="o">|</span> <span class="n">grep</span> <span class="err">$</span><span class="n">test</span><span class="err">`</span> <span class="c1"># run command</span>
+<span class="n">n</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="c1">#check} # determine length</span>
 
-<span class="k">if</span> <span class="o">[[</span> <span class="si">${</span><span class="nv">n</span><span class="si">}</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="c1"># testt length</span>
-<span class="k">then</span> <span class="c1"># greater than zero</span>
-    <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$check</span><span class="s2">"</span>
+<span class="k">if</span> <span class="p">[[</span> <span class="err">$</span><span class="p">{</span><span class="n">n</span><span class="p">}</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">]];</span>  <span class="c1"># testt length</span>
+<span class="n">then</span> <span class="c1"># greater than zero</span>
+    <span class="n">echo</span> <span class="s2">"$check"</span>
 <span class="k">else</span> <span class="c1"># less than zero</span>
-    <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$test</span><span class="s2"> not found"</span>
-<span class="k">fi</span>
+    <span class="n">echo</span> <span class="s2">"$test not found"</span>
+<span class="n">fi</span>
 </pre></div>
 
     </div>
@@ -706,8 +708,8 @@ jupyterlab_widgets        1.0.0              pyhd3eb1b0_1
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span>jupyter --version
-jupyter kernelspec list
+<div class=" highlight hl-python"><pre><span></span><span class="n">jupyter</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">jupyter</span> <span class="n">kernelspec</span> <span class="nb">list</span>
 </pre></div>
 
     </div>
@@ -755,16 +757,16 @@ Available kernels:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-bash"><pre><span></span><span class="nv">test</span><span class="o">=</span><span class="s2">"python3"</span> <span class="c1"># keyword</span>
-<span class="nv">check</span><span class="o">=</span><span class="sb">`</span>jupyter kernelspec list <span class="p">|</span> grep <span class="nv">$test</span><span class="sb">`</span> <span class="c1"># run command</span>
-<span class="nv">n</span><span class="o">=</span><span class="si">${#</span><span class="nv">check</span><span class="si">}</span> <span class="c1"># determine length</span>
+<div class=" highlight hl-python"><pre><span></span><span class="n">test</span><span class="o">=</span><span class="s2">"python3"</span> <span class="c1"># keyword</span>
+<span class="n">check</span><span class="o">=</span><span class="err">`</span><span class="n">jupyter</span> <span class="n">kernelspec</span> <span class="nb">list</span> <span class="o">|</span> <span class="n">grep</span> <span class="err">$</span><span class="n">test</span><span class="err">`</span> <span class="c1"># run command</span>
+<span class="n">n</span><span class="o">=</span><span class="err">$</span><span class="p">{</span><span class="c1">#check} # determine length</span>
 
-<span class="k">if</span> <span class="o">[[</span> <span class="si">${</span><span class="nv">n</span><span class="si">}</span> &gt; <span class="m">0</span> <span class="o">]]</span><span class="p">;</span>  <span class="c1"># testt length</span>
-<span class="k">then</span> <span class="c1"># greater than zero</span>
-    <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$check</span><span class="s2">"</span>
+<span class="k">if</span> <span class="p">[[</span> <span class="err">$</span><span class="p">{</span><span class="n">n</span><span class="p">}</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">]];</span>  <span class="c1"># testt length</span>
+<span class="n">then</span> <span class="c1"># greater than zero</span>
+    <span class="n">echo</span> <span class="s2">"$check"</span>
 <span class="k">else</span> <span class="c1"># less than zero</span>
-    <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$test</span><span class="s2"> not found"</span>
-<span class="k">fi</span>
+    <span class="n">echo</span> <span class="s2">"$test not found"</span>
+<span class="n">fi</span>
 </pre></div>
 
     </div>
