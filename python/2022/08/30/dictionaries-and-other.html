@@ -11,8 +11,8 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Post with Hacks for lists and dictionaries" />
 <meta property="og:description" content="Post with Hacks for lists and dictionaries" />
-<link rel="canonical" href="https://firestorm0986.github.io/CSPrepository2/jupyter/2022/08/30/dictionaries-and-other.html" />
-<meta property="og:url" content="https://firestorm0986.github.io/CSPrepository2/jupyter/2022/08/30/dictionaries-and-other.html" />
+<link rel="canonical" href="https://firestorm0986.github.io/CSPrepository2/python/2022/08/30/dictionaries-and-other.html" />
+<meta property="og:url" content="https://firestorm0986.github.io/CSPrepository2/python/2022/08/30/dictionaries-and-other.html" />
 <meta property="og:site_name" content="MyPortfolio - Aditya" />
 <meta property="og:image" content="https://firestorm0986.github.io/CSPrepository2/images/postimage8.png" />
 <meta property="og:type" content="article" />
@@ -21,7 +21,7 @@
 <meta property="twitter:image" content="https://firestorm0986.github.io/CSPrepository2/images/postimage8.png" />
 <meta property="twitter:title" content="Dictionary And List" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aditya Ajay Nawandhar"},"dateModified":"2022-08-30T00:00:00-05:00","datePublished":"2022-08-30T00:00:00-05:00","description":"Post with Hacks for lists and dictionaries","headline":"Dictionary And List","image":"https://firestorm0986.github.io/CSPrepository2/images/postimage8.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://firestorm0986.github.io/CSPrepository2/jupyter/2022/08/30/dictionaries-and-other.html"},"url":"https://firestorm0986.github.io/CSPrepository2/jupyter/2022/08/30/dictionaries-and-other.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aditya Ajay Nawandhar"},"dateModified":"2022-08-30T00:00:00-05:00","datePublished":"2022-08-30T00:00:00-05:00","description":"Post with Hacks for lists and dictionaries","headline":"Dictionary And List","image":"https://firestorm0986.github.io/CSPrepository2/images/postimage8.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://firestorm0986.github.io/CSPrepository2/python/2022/08/30/dictionaries-and-other.html"},"url":"https://firestorm0986.github.io/CSPrepository2/python/2022/08/30/dictionaries-and-other.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CSPrepository2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://firestorm0986.github.io/CSPrepository2/feed.xml" title="MyPortfolio - Aditya" /><link rel="shortcut icon" type="image/x-icon" href="/CSPrepository2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -84,14 +84,14 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
-        <a class="category-tags-link" href="/CSPrepository2/categories/#jupyter">jupyter</a>
+        <a class="category-tags-link" href="/CSPrepository2/categories/#Python">Python</a>
         
       
       </p>
@@ -290,27 +290,55 @@ The provided word is not a palindrome
 
 
 <span class="n">word</span> <span class="o">=</span> <span class="s2">" "</span>
-<span class="n">questions</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># number of questions</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1"># number of questions</span>
 <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="n">questions_answers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"What command is used to include other functions that were previously developed?"</span> <span class="p">:</span> <span class="s2">"import"</span><span class="p">,</span> 
+
+<span class="n">questions_answers</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"What command is used to include other functions that were previously developed?"</span> <span class="p">:</span> <span class="s2">"import"</span><span class="p">,</span> 
                      <span class="s2">"What command is used to evaluate correct or incorrect response in this example?"</span> <span class="p">:</span> <span class="s2">"if"</span><span class="p">,</span> 
                      <span class="s2">"Each 'if' command contains an '_________' to determine a true or false condition?"</span> <span class="p">:</span> <span class="s2">"expression"</span><span class="p">,</span>
-                     <span class="s2">"Variables for the values the function needs. Is passed as an argument when the function is called"</span> <span class="p">:</span> <span class="s2">"parameters"</span><span class="p">}</span> <span class="c1"># dictionary</span>
+                     <span class="s2">"Variables for the values the function needs. Is passed as an argument when the function is called"</span> <span class="p">:</span> <span class="s2">"parameters"</span><span class="p">}]</span> <span class="c1"># dictionary</span>
+<span class="c1"># questions_answers.append = ({"What command is used to include other functions that were previously developed?" : "import", </span>
+<span class="c1">#                      "What command is used to evaluate correct or incorrect response in this example?" : "if", </span>
+<span class="c1">#                      "Each 'if' command contains an '_________' to determine a true or false condition?" : "expression",</span>
+<span class="c1">#                      "Variables for the values the function needs. Is passed as an argument when the function is called" : "parameters"}) # dictionary</span>
 
-<span class="k">for</span> <span class="n">question</span><span class="p">,</span> <span class="n">answer</span> <span class="ow">in</span> <span class="n">questions_answers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="n">question_with_response</span><span class="p">(</span><span class="n">question</span><span class="p">)</span> <span class="c1"># printing the questions</span>
-    <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Answer: "</span><span class="p">)</span> <span class="c1"># variable that connects to the user's input</span>
-    <span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>  <span class="c1"># if the answer provided is correct</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"You got it right!!"</span><span class="p">)</span>
-        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>  <span class="c1"># if the answer provided is wrong</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Your answer was wrong"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">questions_answers</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">question</span><span class="p">,</span> <span class="n">answer</span> <span class="ow">in</span> <span class="n">i</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">question_with_response</span><span class="p">(</span><span class="n">question</span><span class="p">)</span> <span class="c1"># printing the questions</span>
+        <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Answer: "</span><span class="p">)</span> <span class="c1"># variable that connects to the user's input</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>  <span class="c1"># if the answer provided is correct</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"You got it right!!"</span><span class="p">)</span>
+            <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># if the answer provided is wrong</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Your answer was wrong"</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">questions_answers</span><span class="p">)))</span> <span class="c1"># correct/len(questions_answers)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">))</span> <span class="c1"># correct/len(questions_answers)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Question: What command is used to include other functions that were previously developed?
+Your answer was wrong
+Question: What command is used to evaluate correct or incorrect response in this example?
+You got it right!!
+Question: Each 'if' command contains an '_________' to determine a true or false condition?
+Your answer was wrong
+Question: Variables for the values the function needs. Is passed as an argument when the function is called
+Your answer was wrong
+1/1
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -402,7 +430,7 @@ list:  ['9', '9', '7', '6', '7', '8']
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/CSPrepository2/jupyter/2022/08/30/dictionaries-and-other.html" hidden></a>
+</script><a class="u-url" href="/CSPrepository2/python/2022/08/30/dictionaries-and-other.html" hidden></a>
 </article>
 
       </div>
