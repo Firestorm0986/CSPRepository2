@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: My first blog post, my class goals and something else
-categories: [week-0]
+categories: [Markdown, week-0]
 title: Hello APCSP, Blog Post
 author: Aditya Ajay Nawnadhar
 show_tags: true

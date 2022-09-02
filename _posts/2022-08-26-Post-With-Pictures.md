@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: This is a markdown post with a few pictures
-categories: [week-1]
+categories: [Markdoen, week-1]
 title: Post With Pictures
 author: Aditya Ajay Nawnadhar
 show_tags: true
