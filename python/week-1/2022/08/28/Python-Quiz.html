@@ -11,8 +11,8 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Pythong Quiz in 3 diffrent ways" />
 <meta property="og:description" content="Pythong Quiz in 3 diffrent ways" />
-<link rel="canonical" href="https://firestorm0986.github.io/CSPrepository2/week-1/2022/08/28/Python-Quiz.html" />
-<meta property="og:url" content="https://firestorm0986.github.io/CSPrepository2/week-1/2022/08/28/Python-Quiz.html" />
+<link rel="canonical" href="https://firestorm0986.github.io/CSPrepository2/python/week-1/2022/08/28/Python-Quiz.html" />
+<meta property="og:url" content="https://firestorm0986.github.io/CSPrepository2/python/week-1/2022/08/28/Python-Quiz.html" />
 <meta property="og:site_name" content="MyPortfolio - Aditya" />
 <meta property="og:image" content="https://firestorm0986.github.io/CSPrepository2/images/postimage6.png" />
 <meta property="og:type" content="article" />
@@ -21,7 +21,7 @@
 <meta property="twitter:image" content="https://firestorm0986.github.io/CSPrepository2/images/postimage6.png" />
 <meta property="twitter:title" content="Python Quiz" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aditya Ajay Nawandhar"},"dateModified":"2022-08-28T00:00:00-05:00","datePublished":"2022-08-28T00:00:00-05:00","description":"Pythong Quiz in 3 diffrent ways","headline":"Python Quiz","image":"https://firestorm0986.github.io/CSPrepository2/images/postimage6.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://firestorm0986.github.io/CSPrepository2/week-1/2022/08/28/Python-Quiz.html"},"url":"https://firestorm0986.github.io/CSPrepository2/week-1/2022/08/28/Python-Quiz.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aditya Ajay Nawandhar"},"dateModified":"2022-08-28T00:00:00-05:00","datePublished":"2022-08-28T00:00:00-05:00","description":"Pythong Quiz in 3 diffrent ways","headline":"Python Quiz","image":"https://firestorm0986.github.io/CSPrepository2/images/postimage6.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://firestorm0986.github.io/CSPrepository2/python/week-1/2022/08/28/Python-Quiz.html"},"url":"https://firestorm0986.github.io/CSPrepository2/python/week-1/2022/08/28/Python-Quiz.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CSPrepository2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://firestorm0986.github.io/CSPrepository2/feed.xml" title="MyPortfolio - Aditya" /><link rel="shortcut icon" type="image/x-icon" href="/CSPrepository2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -90,6 +90,9 @@ window.onload = wrap_img;
 
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/CSPrepository2/categories/#Python">Python</a>
+        &nbsp;
       
         <a class="category-tags-link" href="/CSPrepository2/categories/#week-1">week-1</a>
         
@@ -433,99 +436,6 @@ Your answer was wrong
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">prompt</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">prompt</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">prompt</span>
-
-<span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a word: "</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">is_palindrome</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">casefold</span><span class="p">())</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{0}</span><span class="s2"> is a palindrome!!"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"The provided word is not a palindrome"</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>ih
-hi
-The provided word is not a palindrome
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Enter elements of a list separated by space '</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-<span class="n">user_list</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-<span class="c1"># print list</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'list: '</span><span class="p">,</span> <span class="n">user_list</span><span class="p">)</span>
-
-<span class="c1"># for number in numbers:</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">user_list</span><span class="p">)):</span>
-    <span class="n">user_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">user_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">user_list</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">8</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{0}</span><span class="s2"> numbers are unacceptable"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
-        <span class="k">break</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{0}</span><span class="s2"> All those numbers are fine"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-
-list:  ['9', '9', '9', '8', '7']
-9 All those numbers are fine
-9 All those numbers are fine
-9 All those numbers are fine
-8 numbers are unacceptable
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
 </div>
 
 
@@ -538,7 +448,7 @@ list:  ['9', '9', '9', '8', '7']
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/CSPrepository2/week-1/2022/08/28/Python-Quiz.html" hidden></a>
+</script><a class="u-url" href="/CSPrepository2/python/week-1/2022/08/28/Python-Quiz.html" hidden></a>
 </article>
 
       </div>
