@@ -37,5 +37,19 @@ sum = float(num1) + float(num2)
 print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
 ```
 
+---
+
+## My Favorite Video #2
+
+[I Love this](https://www.youtube.com/watch?v=oHg5SJYRHA0)
+
+---
+
+## My Favorite Video #3
+
+[A Research Paper on MATRIX THEORY OF CORRELATIONS IN A LATTICE](https://cyberleninka.org/article/n/29)
+
+---
+
 
 ## Thanks for visiting And Have A Nice Day!!
