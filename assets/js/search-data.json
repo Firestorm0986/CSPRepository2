@@ -91,7 +91,7 @@
     
         ,"post8": {
             "title": "Hello APCSP, Blog Post",
-            "content": "Hello APCSP . My first blog post and I am already excited by how this works. I hope to see and learn more things like this in the future. . . My Class Goals . Learn how to work well with a team. | Learn how to code and create websites. | Learn how to manage my time better. | Learn how to create various features with coding. | Learn a new skill and increase my knowledge. | . . Something I Like . My favorite Video . . Some Basic Coding I learned . num1 = input(&#39;Enter first number: &#39;) num2 = input(&#39;Enter second number: &#39;) sum = float(num1) + float(num2) print(&#39;The sum of {0} and {1} is {2}&#39;.format(num1, num2, sum)) . Thanks for visiting And Have A Nice Day!! .",
+            "content": "Hello APCSP . My first blog post and I am already excited by how this works. I hope to see and learn more things like this in the future. . . My Class Goals . Learn how to work well with a team. | Learn how to code and create websites. | Learn how to manage my time better. | Learn how to create various features with coding. | Learn a new skill and increase my knowledge. | . . Something I Like . My favorite Video . . Some Basic Coding I learned . num1 = input(&#39;Enter first number: &#39;) num2 = input(&#39;Enter second number: &#39;) sum = float(num1) + float(num2) print(&#39;The sum of {0} and {1} is {2}&#39;.format(num1, num2, sum)) . . My Favorite Video #2 . I Love this . . My Favorite Video #3 . A Research Paper on MATRIX THEORY OF CORRELATIONS IN A LATTICE . . Thanks for visiting And Have A Nice Day!! .",
             "url": "https://firestorm0986.github.io/CSPrepository2/markdown/week-0/2022/08/21/My-First-Blog-Post.html",
             "relUrl": "/markdown/week-0/2022/08/21/My-First-Blog-Post.html",
             "date": " • Aug 21, 2022"
@@ -163,7 +163,7 @@
   
       ,"page5": {
           "title": "MyWork",
-          "content": "My Schedule . This is a table containg all the things that I have done through out the diffrent weeks. Thay have been ctegorised based on in which week I did what. . . S.NO Week 0 Week 1 Week 2 . 1 | My first Jupyter notebook | Tools Check | Dictionary and Lists | . 2 | APCSP First Blog post | Python Quiz | Hacks for HTML | . 3 |   | Post With Pictures |   | . 4 |   | First Bash Project |   | . .",
+          "content": "My Schedule . This is a table containg all the things that I have done through out the diffrent weeks. Thay have been ctegorised based on in which week I did what. . . S.NO Week 0 Week 1 Week 2 . 0 | My first Jupyter notebook | Tools Check | Dictionary and Lists | . 1 | APCSP First Blog post | Python Quiz | Hacks for HTML | . 2 |   | Post With Pictures |   | . 3 |   | First Bash Project |   | . .",
           "url": "https://firestorm0986.github.io/CSPrepository2/_pages/06_2022-09-04-My-Work.html",
           "relUrl": "/_pages/06_2022-09-04-My-Work.html",
           "date": ""
