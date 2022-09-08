@@ -9,6 +9,7 @@ show_tags: true
 comments: true
 image: images/postimage4.jpg
 ---
+
 # Outline 
 
 ---
