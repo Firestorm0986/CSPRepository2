@@ -7,7 +7,7 @@ title: Outline Of Quiz On Code.org
 author: Aditya Ajay Nawnadhar
 show_tags: true
 comments: true
-image: images/postimage4.jpg
+image: images/postimage9.jpg
 ---
 
 ## Overall
