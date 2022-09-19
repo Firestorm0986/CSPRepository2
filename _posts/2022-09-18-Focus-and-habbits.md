@@ -7,7 +7,7 @@ title: Notes On Focus and Habbits
 author: Aditya Ajay Nawnadhar
 show_tags: true
 comments: true
-image: images/markdown.png
+image: images/postimage11.png
 ---
 
 ## Vocabulary from the video 

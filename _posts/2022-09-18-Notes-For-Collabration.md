@@ -7,7 +7,7 @@ title: Notes On Collabration
 author: Aditya Ajay Nawnadhar
 show_tags: true
 comments: true
-image: images/markdown.png
+image: images/postimage12.png
 ---
 
 ## Importance of collabration
