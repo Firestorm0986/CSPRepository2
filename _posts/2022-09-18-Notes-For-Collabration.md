@@ -67,3 +67,9 @@ Effective collaboration leads to the practice of interpersonal skills, such as:
 - Repl.it - multiplayer, multiple languages
 - GitHub - collaboration and repository
 - Shared document or folder - share code
+
+## My Team 
+The reasons I choose this team 
+- My group does consist of curent friends, but it is not strictly based on that. We do have common interests, interests in coding, interests in getting good grades, and interests in other hobbies. But, we do have separate interests and diverse personalities
+- My group has diverse backgrounds and perspectives, but not gender. Our group is all sigma-male, but we are differents races and ethnicities. We also have different perspectives due to these different backgrounds and different upbringings.
+- My group is very well equipped for the skill sets needed for success in the classroom. We work together collaboratively, we share ideas, we share mistakes in code, we talk about goals, and we are also kind to each other. We also help each other out regularly. 
