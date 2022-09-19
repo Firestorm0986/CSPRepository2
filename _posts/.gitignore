@@ -1,1 +1,10 @@
-
+# Ignore from local build
+settings.ini
+Gemfile.lock
+_posts/2022-08-22-Bash.md
+_posts/2022-08-22-My-first-Jupiternotebook.md
+_posts/2022-08-24-Google-Doc.md
+_posts/2022-08-28-Python-Quiz.md
+_posts/2022-08-28-Tool-checks.md
+_posts/2022-08-30-dictionaries-and-other.md
+_posts/2022-09-11-Performance-Task-ideas.md
