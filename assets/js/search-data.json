@@ -249,19 +249,16 @@
   
 
   
-
+      ,"page6": {
+          "title": "Submenu",
+          "content": "Submenu . | Javascript kernel | table | .",
+          "url": "https://firestorm0986.github.io/CSPrepository2/_pages/07_2022-09-25-submenu.html",
+          "relUrl": "/_pages/07_2022-09-25-submenu.html",
+          "date": ""
+      }
+      
   
 
-  
-  
-
-  
-  
-
-  
-  
-
-  
   
 
   
@@ -270,7 +267,21 @@
   
 
   
-      ,"page14": {
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+      ,"page15": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://firestorm0986.github.io/CSPrepository2/robots.txt",
