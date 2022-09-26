@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "My First Bash project",
-            "content": "console.log(&quot;happyu&quot;); . KeyboardInterrupt . function myFunction(a, b) { return a / b; } myFunction(9,3) . Input In [11] function myFunction(a, b) { ^ SyntaxError: invalid syntax .",
+            "content": "Making a new function to divide . function myFunction(a, b) { return a / b; } myFunction(9,3) . 3 . Using the console.log function . console.log(&quot;happyu&quot;) . happyu .",
             "url": "https://firestorm0986.github.io/CSPrepository2/bash/week-1/2022/09/25/Using-Javascript-kernel.html",
             "relUrl": "/bash/week-1/2022/09/25/Using-Javascript-kernel.html",
             "date": " • Sep 25, 2022"
