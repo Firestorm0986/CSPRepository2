@@ -103,3 +103,4 @@ person.prototype._toHtml = function() {
   );
 
 };
+</script>
