@@ -7,7 +7,7 @@ title: Night At the Museum
 author: Aditya Ajay Nawnadhar
 show_tags: true
 comments: true
-image: images/postimage10.jpg
+image: images/postimage10.png
 ---
 
 ## Night At the Museum -
