@@ -7,14 +7,12 @@ title: Night At the Museum
 author: Aditya Ajay Nawnadhar
 show_tags: true
 comments: true
-image: images/postimage6.jpg
+image: images/postimage10.jpg
 ---
 
 ## Night At the Museum -
 
 One night near the end of the trimester where students in art and craft classes can show off their progress and work. Classes include 3D Animation, AP Studio Art, Drawing and Painting, Ceramics, CSP, CSA, and more. In CSP and CSA, teams present their final project, while in drawing and painting, students show off their best artpieces. 3D Animation students also present their digital artworks while ceramics students present their sculptures. During this night, all the art students can gather and have fun as they survey all the artworks.
-
-![]({{ site.baseurl }}/images/tri1-result.png)
 
 ---
 
