@@ -38,9 +38,9 @@ baseurl: "/CSPrepository2" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
-  social_links:
-    Instagram: adi_nowonder
-    github: firestorm0986
+skin: dark
+  #
+
 
 # Set this to true to get LaTeX math equation support
 use_math: 
