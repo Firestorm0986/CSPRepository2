@@ -19,12 +19,22 @@ image: images/postimage4.jpg
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
 <!-- Hack 3: do your own thing -->
 
-{% assign BITS = 8 %}
+{% assign BITS = 24 %}
+<style>
+    .box {
+        width: 880px;
+        height: 187px;
+        background-color: #ffffff;
+    }
+</style>
 
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
         <span class="fs-4">Binary Math with Conversions</span>
     </header>
+    <br>
+    <br>
+    <br>
     <div class="row justify-content-md-center">
         <div class="col-8">
             <table class="table">
@@ -39,7 +49,7 @@ image: images/postimage4.jpg
                 <th>color</th>
             </tr>
             <tr>
-                <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
+                <td><button type="button" id="add1_c1" onclick="add(1)">+1</button></td>
                 <td id="binary">00000000</td>
                 <td id="octal">0</td>
                 <td id="hexadecimal">0</td>
@@ -49,6 +59,7 @@ image: images/postimage4.jpg
                 <td id= "colorfinal"></td>
             </tr>
             </table>
+            <div class = "box" id="box"></div>
         </div>
         <div class="col-12">
             {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
@@ -68,37 +79,10 @@ image: images/postimage4.jpg
                 <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
                 {% endfor %}
             </tr>
-            <tr>
-                {% comment %}Build many bits{% endcomment %}
-                {% for i in (0..bits) %}
-                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="40" height="Auto">
-                    <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
-                </td>
-                {% endfor %}
-            </tr>
-            <tr>
-                {% comment %}Value of bit{% endcomment %}
-                {% for i in (0..bits) %}
-                <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
-                {% endfor %}
-            </tr>
-            <tr>
-                {% comment %}Build many bits{% endcomment %}
-                {% for i in (0..bits) %}
-                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="40" height="Auto">
-                    <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
-                </td>
-                {% endfor %}
-            </tr>
-            <tr>
-                {% comment %}Value of bit{% endcomment %}
-                {% for i in (0..bits) %}
-                <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
-                {% endfor %}
-            </tr>
             </table>
         </div>
     </div>
+    
 </div>
 
 <script>
@@ -126,6 +110,9 @@ image: images/postimage4.jpg
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
+        // added
+        document.getElementById('RGBvalue').innerHTML = parseInt(binary, 2).toString();
+        document.getElementById('box').style.backgroundColor = setRGB();
     }
     //
     function decimal_2_base(decimal, base) {
@@ -191,6 +178,61 @@ image: images/postimage4.jpg
             document.getElementById('butt' + i).innerHTML = MSG_ON;
         }
         }
+
+
+// added
+    }
+     function addr(n) {
+        let binary = getBits();
+        // convert to decimal and do math
+        let RGBvalue = parseInt(binary, 2);
+        if (n > 0) {  // PLUS
+        RGBvalue = MAX === RGBvakue ? 0 : RGBvalue += n; // OVERFLOW or PLUS
+        } else  {     // MINUS
+        RGBvalue = 0 === RGBvalue ? MAX : RGBvalue += n; // OVERFLOW or MINUS
+        }
+        // convert the result back to binary
+        binary = decimal_2_base(RGBvalue, 2);
+        // update conversions
+        setConversions(binary);
+        // update bits
+        for (let i = 0; i < binary.length; i++) {
+        let digit = binary.substr(i, 1);
+        document.getElementById('digit' + i).value = digit;
+        if (digit === "1") {
+            document.getElementById('bulb' + i).src = IMAGE_ON;
+            document.getElementById('butt' + i).innerHTML = MSG_OFF;
+        } else {
+            document.getElementById('bulb' + i).src = IMAGE_OFF;
+            document.getElementById('butt' + i).innerHTML = MSG_ON;
+        }
+        }
+    }
+
+    function decimal_2_baser(RGBvalue, base) {
+        let conversion = "";
+        // loop to convert to base
+        do {
+        let digit = RGBvalue % base;
+        conversion = "" + digit + conversion; // what does this do?
+        RGBvalue = ~~(RGBvalue / base);         // what does this do?
+        } while (RGBvalue > 0);                  // why while at the end? what is ~~?
+        // loop to pad with zeros
+        if (base === 2) {                        // only pad for binary conversions
+        for (let i = 0; conversion.length < BITS; i++) {
+            conversion = "0" + conversion;
+        }
+        }
+        return conversion;
+    }
+
+    function setRGB() {
+        let R = document.getElementById('hexadecimal').innerHTML;
+
+        let color_code = "#" + R;
+        console.log(color_code)
+        //document.getElementbyId("color_box").style.backgroundColor = color_code;
+        return color_code
     }
 </script>
 
