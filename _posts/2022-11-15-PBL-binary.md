@@ -1,19 +1,25 @@
 ---
-title: Binary Math
-layout: default
-description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
-permalink: /frontend/binary
-image: 
-categories: [3.B, 3.C, C4.4]
-tags: [html, liquid, javascript]
-week: 13
-type: pbl
+toc: true
+layout: post
+description: binary
+categories: [Markdown, week-1]
+title: binary code
+author: Aditya Ajay Nawnadhar
+show_tags: true
+comments: true
+image: images/postimage4.jpg
 ---
 
 <!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable -->
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
 <!-- Hack 3: do your own thing -->
 
+
+<!-- Hack 1: add a character display to text when 8 bits, determine if printable or not printable -->
+<!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
+<!-- Hack 3: do your own thing -->
+
+{% assign BITS = 8 %}
 
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
@@ -29,6 +35,8 @@ type: pbl
                 <th>Hexadecimal</th>
                 <th>Decimal</th>
                 <th>Minus</th>
+                <th>RGB</th>
+                <th>color</th>
             </tr>
             <tr>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
@@ -37,6 +45,8 @@ type: pbl
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
                 <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+                <td id="RGBvalue">0</td>
+                <td id= "colorfinal"></td>
             </tr>
             </table>
         </div>
@@ -44,6 +54,34 @@ type: pbl
             {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
             {% assign bits = BITS | minus: 1 %} 
             <table class="table">
+            <tr>
+                {% comment %}Build many bits{% endcomment %}
+                {% for i in (0..bits) %}
+                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
+                </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% comment %}Value of bit{% endcomment %}
+                {% for i in (0..bits) %}
+                <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% comment %}Build many bits{% endcomment %}
+                {% for i in (0..bits) %}
+                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="40" height="Auto">
+                    <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
+                </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% comment %}Value of bit{% endcomment %}
+                {% for i in (0..bits) %}
+                <td><input type='text' id="digit{{ i }}" Value="0" size="1" readonly></td>
+                {% endfor %}
+            </tr>
             <tr>
                 {% comment %}Build many bits{% endcomment %}
                 {% for i in (0..bits) %}
@@ -155,3 +193,4 @@ type: pbl
         }
     }
 </script>
+
