@@ -49,7 +49,7 @@ image: images/postimage4.jpg
                 <th>color</th>
             </tr>
             <tr>
-                <td><button type="button" id="add1_c1" onclick="add(1)">+1</button></td>
+                <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
                 <td id="binary">00000000</td>
                 <td id="octal">0</td>
                 <td id="hexadecimal">0</td>
@@ -105,9 +105,9 @@ image: images/postimage4.jpg
     function setConversions(binary) {
         document.getElementById('binary').innerHTML = binary;
         // Octal conversion
-        document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
+        document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(24);
         // Hexadecimal conversion
-        document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
+        document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16).padStart(2, '0');
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
         // added
@@ -227,11 +227,9 @@ image: images/postimage4.jpg
     }
 
     function setRGB() {
-        let R = document.getElementById('hexadecimal').innerHTML;
-
-        let color_code = "#" + R;
+        let RGB = document.getElementById('hexadecimal').innerHTML;
+        let color_code = "#" + RGB;
         console.log(color_code)
-        //document.getElementbyId("color_box").style.backgroundColor = color_code;
         return color_code
     }
 </script>
