@@ -228,6 +228,7 @@ layout: notebook
 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;playing </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
+    <span class="k">break</span>
 </pre></div>
 
     </div>
