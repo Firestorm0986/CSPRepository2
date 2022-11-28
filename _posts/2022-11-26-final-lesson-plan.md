@@ -25,13 +25,25 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Abstraction">Data Abstraction<a class="anchor-link" href="#Data-Abstraction"> </a></h1>
+<h1 id="Data-Abstraction">Data Abstraction<a class="anchor-link" href="#Data-Abstraction"> </a></h1><ul>
+<li>Data abstraction provides a seperation between the abstract properties of a data ype and the concrete details of its representation</li>
+<li>data abstractions manage complexity in programs by giving a collection of data a name without refrencing the specific etails of the representation</li>
+<li>Data Abstraction makes it easier to implement, develop and maintain code easier</li>
+<li>The ue of lists allows for multiple related values to be treated as a single value</li>
+<li>In AP exam the index values for lists start rom 1 and not 0 like in python.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Using-simple-lists-and-working-with-variables">Using simple lists and working with variables<a class="anchor-link" href="#Using-simple-lists-and-working-with-variables"> </a></h2>
+<h2 id="Using-simple-lists-and-working-with-variables">Using simple lists and working with variables<a class="anchor-link" href="#Using-simple-lists-and-working-with-variables"> </a></h2><ul>
+<li>Lists are a powerful tool that can be used to organise, maintain and develoop related data</li>
+<li>For example - A list of students in a class, if there was no list we would assign a variable to each student but if the data was in a list everyone would be under one variable. If a student left the class or was added instead of deleting entire variable we can edit the previous list.</li>
+<li>this helps organize data and make less mistakes</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -136,15 +148,16 @@ Adding cream
     <span class="s2">&quot;Witch Hazel - Shrub&quot;</span><span class="p">,</span>
 <span class="p">]</span>
 
+<span class="c1"># two empty lists</span>
 <span class="n">flowers</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">shrubs</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">for</span> <span class="n">plant</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">plant</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span> <span class="c1"># A for loop that goes through each item in the list</span>
     <span class="k">if</span> <span class="s2">&quot;Flower&quot;</span> <span class="ow">in</span> <span class="n">plant</span><span class="p">:</span>
-        <span class="n">flowers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">plant</span><span class="p">)</span>
+        <span class="n">flowers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">plant</span><span class="p">)</span> <span class="c1"># executed if &quot;flowers&quot; is in the item</span>
     <span class="k">elif</span> <span class="s2">&quot;Flower&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">plant</span><span class="p">:</span>
-        <span class="n">shrubs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">plant</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shrubs </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shrubs</span><span class="p">))</span>
+        <span class="n">shrubs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">plant</span><span class="p">)</span> <span class="c1"># executed if &quot;shrubs&quot; is in the item</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shrubs </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">shrubs</span><span class="p">))</span> <span class="c1"># The format() method formats the specified value(s) and insert them inside the string&#39;s placeholder. The placeholder is defined using curly brackets: {}</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Flowers </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">flowers</span><span class="p">))</span>
 </pre></div>
 
@@ -170,6 +183,12 @@ Flowers [&#39;Bellflower - Flower&#39;, &#39;China Pink - Flower&#39;, &#39;Daff
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Organising-diffrent-items-in-the-lists">Organising diffrent items in the lists<a class="anchor-link" href="#Organising-diffrent-items-in-the-lists"> </a></h2>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -183,14 +202,33 @@ Flowers [&#39;Bellflower - Flower&#39;, &#39;China Pink - Flower&#39;, &#39;Daff
           <span class="p">(</span><span class="s2">&quot;More Mayhem&quot;</span><span class="p">,</span> <span class="s2">&quot;Emilda May&quot;</span><span class="p">,</span> <span class="mi">2011</span><span class="p">),</span>
           <span class="p">(</span><span class="s2">&quot;Ride the Lightning&quot;</span><span class="p">,</span> <span class="s2">&quot;Metallica&quot;</span><span class="p">,</span> <span class="mi">1984</span><span class="p">),</span>
           <span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">albums</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">albums</span><span class="p">))</span> <span class="c1"># number of items in the list</span>
 
-<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">artist</span><span class="p">,</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">albums</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">artist</span><span class="p">,</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">albums</span><span class="p">:</span> 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Album: </span><span class="si">{}</span><span class="s2">, Artist: </span><span class="si">{}</span><span class="s2">, year: </span><span class="si">{}</span><span class="s2">&quot;</span>
-          <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">artist</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
+          <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">artist</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span> <span class="c1"># returns a segregated and labled presentation of the songs</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+Album: Welcome to my nightmare, Artist: Alice cooper, year: 1975
+Album: Bad Company, Artist: Bad Company, year: 1974
+Album: Nightflight, Artist: Budgie, year: 1981
+Album: More Mayhem, Artist: Emilda May, year: 2011
+Album: Ride the Lightning, Artist: Metallica, year: 1984
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
