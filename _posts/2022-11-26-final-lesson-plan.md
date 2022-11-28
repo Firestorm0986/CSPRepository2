@@ -115,7 +115,11 @@ Adding cream
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Breaking-lists-into-more-lists">Breaking lists into more lists<a class="anchor-link" href="#Breaking-lists-into-more-lists"> </a></h2>
+<h2 id="Breaking-lists-into-more-lists">Breaking lists into more lists<a class="anchor-link" href="#Breaking-lists-into-more-lists"> </a></h2><ul>
+<li>A list of data can be further segregated using more similar characteristics in the data </li>
+<li>For example, the code segement below segregates the data given into 2 new lists. One that one contains plants and one that contains only shrubs.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -185,7 +189,10 @@ Flowers [&#39;Bellflower - Flower&#39;, &#39;China Pink - Flower&#39;, &#39;Daff
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Organising-diffrent-items-in-the-lists">Organising diffrent items in the lists<a class="anchor-link" href="#Organising-diffrent-items-in-the-lists"> </a></h2>
+<h2 id="Organising-diffrent-items-in-the-lists">Organising diffrent items in the lists<a class="anchor-link" href="#Organising-diffrent-items-in-the-lists"> </a></h2><ul>
+<li>individual elements can be called, seprated and organised using for loops</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -235,6 +242,16 @@ Album: Ride the Lightning, Artist: Metallica, year: 1984
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Splitting-and-joining-lists-and-data-inside-them">Splitting and joining lists and data inside them<a class="anchor-link" href="#Splitting-and-joining-lists-and-data-inside-them"> </a></h2><ul>
+<li>The split() method splits a string into a list. You can specify the separator, default separator is any whitespace.</li>
+<li>The join() method takes all items in an iterable and joins them into one string. A string must be specified as the separator.</li>
+</ul>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -246,11 +263,11 @@ Album: Ride the Lightning, Artist: Metallica, year: 1984
 <span class="s2">fox jumps</span><span class="se">\t</span><span class="s2">over </span>
 <span class="s2">the lazy dog&quot;&quot;&quot;</span>
 
-<span class="n">words</span> <span class="o">=</span> <span class="n">panagram</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">panagram</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c1"># splitting the string above into individual words. Seperator here is any whitespace.</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
 
 <span class="n">numbers</span> <span class="o">=</span> <span class="s2">&quot;9,223,372,036,854,775,807&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">))</span> <span class="c1"># seprator is &quot;,&quot;</span>
 
 <span class="n">generated_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span>
                   <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span>
@@ -260,14 +277,31 @@ Album: Ride the Lightning, Artist: Metallica, year: 1984
                   <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span>
                   <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span>
                   <span class="p">]</span>
-<span class="n">values</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">generated_list</span><span class="p">)</span>
+<span class="n">values</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">generated_list</span><span class="p">)</span> <span class="c1"># converting the list into a string</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
 
-<span class="n">values_list</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">values_list</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c1"># seperator is any whitespace</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">values_list</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;the&#39;, &#39;quick&#39;, &#39;brown&#39;, &#39;fox&#39;, &#39;jumps&#39;, &#39;over&#39;, &#39;the&#39;, &#39;lazy&#39;, &#39;dog&#39;]
+[&#39;9&#39;, &#39;223&#39;, &#39;372&#39;, &#39;036&#39;, &#39;854&#39;, &#39;775&#39;, &#39;807&#39;]
+9 223 372 036 854 775 807 
+[&#39;9&#39;, &#39;223&#39;, &#39;372&#39;, &#39;036&#39;, &#39;854&#39;, &#39;775&#39;, &#39;807&#39;]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
