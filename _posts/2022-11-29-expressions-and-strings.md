@@ -147,7 +147,9 @@ Hint: use the MOD operator (a % b) to find the remainder when a is divided by b.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
     <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">7</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
@@ -159,6 +161,8 @@ Hint: use the MOD operator (a % b) to find the remainder when a is divided by b.
             <span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">2</span><span class="o">**</span><span class="n">i</span>
             <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
  
 <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
@@ -182,13 +186,25 @@ Hint: use the MOD operator (a % b) to find the remainder when a is divided by b.
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>00000000
+&#34;00000000&#34;
 00000001
+&#34;00000001&#34;
 00000010
+&#34;00000010&#34;
 00000011
+&#34;00000011&#34;
 00000100
+&#34;00000100&#34;
 00000101
+&#34;00000101&#34;
 00000110
+&#34;00000110&#34;
 00000111
+&#34;00000111&#34;
+00001000
+&#34;00001000&#34;
+00001001
+&#34;00001001&#34;
 </pre>
 </div>
 </div>
@@ -202,9 +218,15 @@ Hint: use the MOD operator (a % b) to find the remainder when a is divided by b.
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <html>
-
+<script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "x";
+}
+</script>
 <div>
-    <button id = "but" onclick = "number"> click me to see number from 1 to 10 as binary</button>
+    <button type="button" id = "but" onclick = "myFunction()"> click me to see number from 1 to 10 as binary</button>
+    <p id="demo"></p>
+</div>
 </html>
 </div>
 </div>
