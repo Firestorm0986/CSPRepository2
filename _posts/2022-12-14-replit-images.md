@@ -13,3 +13,9 @@ image: images/postimage4.jpg
 ## Homewrok image 
 THe homework image is below 
 ![]({{ site.baseurl }}/images/replit.png)
+
+--- 
+
+## Classwork
+THis is the classwork on replit 
+![]({{ site.baseurl }}/images/replit2.png)
