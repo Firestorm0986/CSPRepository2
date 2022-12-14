@@ -12,5 +12,4 @@ image: images/postimage4.jpg
 
 ## Homewrok image 
 THe homework image is below 
-
 ![]({{ site.baseurl }}/images/replit.png)
