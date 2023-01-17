@@ -106,8 +106,12 @@ window.onload = wrap_img;
     list.innerHTML = '';
     for (let remind of reminded){
       const item = document.createElement('li');
-      item.innerHTML = remind.text </span>;
+      const item1 = document.createElement('li');
+     item1.innerHTML = remind.text;
+     item.innerHTML =`<button> edit </button> <button> delete </button>` ;
+      list.appendChild(item1);
       list.appendChild(item);
+      
     }
   }
 
