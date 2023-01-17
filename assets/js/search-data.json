@@ -514,7 +514,7 @@
 
   
       ,"page7": {
-          "title": "Submenu",
+          "title": "CRUD",
           "content": "CRUD . Submit Your Favourites . . . What it should look like . The code below shows what the script code should have done. . . . Tesla model y complete delete . . here is the javascript code . const form = document.queryselector(&#39;#add-form&#39;) const input = document.queryselector(&#39;#new-text&#39;) const list = document.queryselector(&#39;#new-list&#39;) let reminded = [] function updatelist() { list.innerHTML = &#39;&#39;; for (let remind of reminded){ const item = documet.creatElement(&#39;li&#39;); item.innerHTML = &lt;span&gt;{remind.text}&lt;/span&gt;; list.appendChild(item); } } function addremind(text) { const newremind = { text, completed: false }; reminded.push(newremind); updatelist(); } form.addEventListener(&#39;submit&#39;, event =&gt; { event.preventDefault(); const text = input.value; if (text){ addremind(text); input.value = &#39;&#39;; } }); .",
           "url": "https://firestorm0986.github.io/CSPrepository2/_pages/08_2023-01-16-CRUD.html",
           "relUrl": "/_pages/08_2023-01-16-CRUD.html",
