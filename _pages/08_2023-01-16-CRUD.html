@@ -105,8 +105,8 @@ window.onload = wrap_img;
   function updatelist() {
     list.innerHTML = '';
     for (let remind of reminded){
-      const item = documet.creatElement('li');
-      item.innerHTML = <span>{remind.text}</span>;
+      const item = document.creatElement('li');
+      item.innerHTML = '<span> {remind.text} </span>';
       list.appendChild(item);
     }
   }
