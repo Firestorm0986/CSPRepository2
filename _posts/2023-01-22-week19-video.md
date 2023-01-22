@@ -1,0 +1,22 @@
+---
+toc: true
+layout: post
+description: The videos and explanation of the videos and description of the work done
+categories: [Markdown, week-19]
+title: Week 19 videos and work
+author: Aditya Ajay Nawnadhar
+show_tags: true
+comments: true
+image: images/jbCNvTM4gwr2qV8X8fW3ZB.png
+---
+
+## Working with postman
+> In this I added values to the existing table by using postman and car.py file. In the start I did run into issues as I forgot to add the id parameter in the car.py file but after fixing that I got it to work.
+>Click the words below for the link to video
+[Postman video](https://drive.google.com/file/d/1UlDBt9pTNOGji0gmrxKSIIor_5t9n8L9/view?usp=sharing)
+
+## Making new model and API 
+>I used user.py to make a new table in sqlite.db itself. Some errors I ran into were in the main.py as you had to add certain imports and functions to make it so that it works.
+>Click the words below for the link to video
+[sqlite video](https://drive.google.com/file/d/1S43rY_jEoIJesE8JiKuD-nKUllZUro8F/view?usp=sharing)
+
