@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: A post of reflections on dangers and topics that come along with the shift in technology
 categories: [Markdown, week-19]
-title: Week 19 videos and work
+title: Digital divide
 author: Aditya Ajay Nawnadhar
 show_tags: true
 comments: true
