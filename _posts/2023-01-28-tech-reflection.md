@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: A post of reflections on dangers and topics that come along with the shift in technology
 categories: [Markdown, week-19]
-title: Digital divide
+title: Reflection
 author: Aditya Ajay Nawnadhar
 show_tags: true
 comments: true
@@ -103,3 +103,43 @@ What are pros/cons on internet blockers at router and lack of admin password on 
 - Lack of personalization: Students may not be able to personalize their computer to meet their specific needs. for different classes and purposes.
 
 ----- 
+
+## Safe Computing
+
+### Questions
+> Describe PII you have seen on project in CompSci Principles.
+What are your feelings about PII and your personal exposure?
+Describe good and bad passwords? What is another step that is used to assist in authentication.
+Try to describe Symmetric and Asymmetric encryption.
+Provide an example of encryption we used in AWS deployment.
+Describe a phishing scheme you have learned about the hard way. Describe some other phishing techniques.
+
+### Answers
+ - Personal identifiable information is present all over my website. The website contains my name, what I like and don't and also links to my personal github account. I am ok with this because this blog is for my school project, so I need teachers and peers to be able to identify that the work on this website is all mine and also that this website is mine.
+ - PII are have potential to be very dangerous. But at the same time it is important some times to identify the person and also provide the person with the ability to call something his work. 
+ - Bad passwords are those that are very predictable and something that is very simple like "passwords" or "yourname@123". good passwords are complex and unpredictable with a good distribution of characters, numbers nad symbols. something that is very hard to guess. 
+ - A symetric encription uses the same key to access data, and allows it so anyone who has the specific key (password) can attain access to the data. Asymmetric encryption uses two keys: a public and a private that are both required to attain the data. 
+ ![]({{ site.baseurl }}/images/typesofkeys.jpg)
+- In AWS deployment we used AES-256 encryption. The data we have on our deployed AWS sites allows it so only shared contributors to our project (via github) can pull, push, and commit changes to the main site. In doing so, we encrypted our project from public use
+- I used see all these ads about free things, and one time I clicked on one of them which took me to this website that said that you need to input email to win the product. After doing so nothing actually ever happened, I realized that I was scammed.The account that I gave was a burner so that was ok. Some other strategies are conducting these scams on the older generation, they tell them about some cash back and hack into their computer and steel all money directly from their bank account. 
+
+## Licenses and legal  
+
+### Questions
+> - When you create a GitHub repository it requests a license type. Review the license types in relationship to this Tech Talk and make some notes in your personal blog.
+> - In your blog, summarize the discussions and personal analysis on Software Licenses/Options, Digital Rights, and other Legal and Ethical thoughts from this College Board topic.
+> - Make a license for your personal (blog) and Team repositories for the CPT project. Be sure to have a license for both Team GitHub repositories (frontend/backend). Document license(s) you picked and why. FYI, frontend, since it is built on GitHub pages may come with a license and restrictions. Document in blog how team made license choice and process of update.
+
+## Answers
+
+-   There are community licences, MIT Licenses, and GNU GPLv3 Licenses. Community is when you contribute to the project, does not have a dependency MIT is short, straightforward, anyone can do almost anything with the project and make/distribute versions GNU lets people do anything with the project, however they cannot distribute versions of it.
+
+- I prefer to use the MIT license, the reason being it has the least amount of restrictions and also allows people to use my code without restriction and reference and distribute it. This is something that is needed when working in a school setting where everyone helps each other. 
+
+- Different licenses allow different people to do different things on and with your site/function. These are like patents, and big companies like Qualcomm make money off of them. Opensource management is completely legal for educational use, however if you want to monetise the work that you use/take from a licensed source you will have to attend to the terms of the license. I feel that these licenses can be misleading and can have very restrictive terms.
+
+- For both of the repositories I chose MIT license, the reason being it has the least amount of restrictions and also allows people to use my code without restriction and reference and distribute it. This is something that is needed when working in a school setting where everyone helps each other. 
+![]({{ site.baseurl }}/images/backend-license.png)
+![]({{ site.baseurl }}/images/frontend-license.png)
+
+
