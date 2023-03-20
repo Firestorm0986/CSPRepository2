@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      9 min read
     
 </span></p>
 
@@ -165,16 +165,27 @@ window.onload = wrap_img;
 <blockquote>
 <p>Uses PRAGMA statement to read schema.</p>
 </blockquote>
-<p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a>- What is a database schema?</p>
-<blockquote>
+<p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a></p>
 <ul>
-<li>
-<li>What is the purpose of identity Column in SQL database?</li>
-<li>columns are </li>
-<li>What is the purpose of a primary key in SQL database?</li>
-<li>What are the Data Types in SQL table?</li>
+<li>What is the purpose of identity Column in SQL database?<blockquote>
+<ul>
+<li>Identity columns help to identify each specific row of the database. This ensures that each row has its own identity column.</li>
 </ul>
 </blockquote>
+</li>
+<li>What is the purpose of a primary key in SQL database?<blockquote>
+<ul>
+<li>A primary key in a SQL database is something which can uniquely identify the row of a database. For example, the users database uses id for the primary key. For the coders, we use the uid as the primary key.</li>
+</ul>
+</blockquote>
+</li>
+<li>What are the Data Types in SQL table?<blockquote>
+<ul>
+<li>The data types in a SQL table include integers, floats, and strings.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
 
 </div>
 </div>
@@ -256,7 +267,7 @@ a- Look at conn object and cursor object in VSCode debugger.  What attributes ar
 </li>
 <li>Is "results" an object?  How do you know?<blockquote>
 <ul>
-<li>a scheme, as they have different data types in them. </li>
+<li>a schema, as they have different data types in them. </li>
 </ul>
 </blockquote>
 </li>
@@ -308,13 +319,12 @@ a- Look at conn object and cursor object in VSCode debugger.  What attributes ar
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, 'Thomas Edison', 'toby', 'sha256$1DCsXlQkIHSMrEKK$d414364b6ab56e60742a5ca975ccc60a612f95da16a1daaf0ab31e246e123d31', '1847-02-11')
-(2, 'Nikola Tesla', 'niko', 'sha256$bgYVJxOd8ivCmnuK$212ab3368e0b60643301bfcf9d6d3076b9d8e56d582d46fb4af2424d46e18cb1', '2023-03-15')
-(3, 'Alexander Graham Bell', 'lex', 'sha256$kNUdnsrpLZMizqj5$49767b3007dc1fc7d61ec1d70d429b2a87d8d85e5093e4e7fa6f15099288776d', '2023-03-15')
+<pre>(2, 'Nikola Tesla', 'niko', 'sha256$bgYVJxOd8ivCmnuK$212ab3368e0b60643301bfcf9d6d3076b9d8e56d582d46fb4af2424d46e18cb1', '2023-03-15')
 (4, 'Eli Whitney', 'whit', 'sha256$wSGHrgPb0nX6xZhT$9155064fe01da3642a0afc65cf650ebc9b6dd12757c4289d7816c7ff196f6d82', '2023-03-15')
-(5, 'Indiana Jones', 'indi', 'sha256$tzvLp3REOlI7W8e4$2b624de5a58ad69797d4b4415248a0c31e12246fd967f0c894c6f1ee165201ac', '1920-10-21')
+(5, 'aditya', 'indi', 'sha256$fIj5b5J4EJxzKWKQ$38f9e9b086679a5635fab03ba1c57677811128a29f1cb21622642e494d907855', '1920-10-21')
 (6, 'Marion Ravenwood', 'raven', 'sha256$Ipcsu3bUlLybXqkT$db75b914c2411ddb753e6f21d8f0129de2167b7761312dbba3a040ee23d3a97b', '1921-10-21')
-(7, 'Aditya Anwandhar', 'Aditya Nawandhar', 'sha256$MbmJVkCzHP0iFo52$38041efc0547525af8b07d46f80c280a7ef45423ca04cd2757e4387bb441e775', '2023-03-15')
+(9, 'Thomas Edison', 'toby', 'sha256$ToTq1wbGeJ7vKvnw$f083549d8afd723b0e00d23d11dda31cf59bae1e955688c2e321c666f8587022', '1847-02-11')
+(10, 'Alexander Graham Bell', 'lex', 'sha256$Z3p5Da5uiokroaBm$9b632754fe2b79775bcdf16c5943207b601ceb08c0112fc2f8b0da4df9ed8802', '2023-03-17')
 </pre>
 </div>
 </div>
@@ -335,7 +345,9 @@ a- Look at conn object and cursor object in VSCode debugger.  What attributes ar
 <p>Uses SQL INSERT to add row</p>
 <ul>
 <li>Compore create() in both SQL lessons.  What is better or worse in the two implementations?</li>
+<li>The code for this create is much shorter. It requires the conn and cursor objects to be opened and closed. The cursor must execute a code which takes all of the variables and adds it to the table.</li>
 <li>Explain purpose of SQL INSERT.   Is this the same as User <strong>init</strong>?</li>
+<li>SQL INSERT allows rows to be added to an SQL database table. The User init function allows a dataset which is defined to be able to added to an SQL database. This serves a similar purpose.</li>
 </ul>
 </blockquote>
 
@@ -399,8 +411,11 @@ a- Look at conn object and cursor object in VSCode debugger.  What attributes ar
 <p>Uses SQL UPDATE to modify password</p>
 <ul>
 <li>What does the hacked part do?</li>
+<li>The hacked part of the update function outputs a message to the user if the length of the password is too short. This serves as authentication for the user to make sure that a password is long enough for security purposes.</li>
 <li>Explain try/except, when would except occur?</li>
+<li>Try and except work as things which check if certain code is running/working. Try runs if the code is working smoothly, and in this case serves to update the password. Except occurs if there is an error with the connection and cursor with the database. This serves as a good way to check errors if there is something wrong with the code.</li>
 <li>What code seems to be repeated in each of these examples to point, why is it repeated?</li>
+<li>Code that seems to be repeated include import sqlite3, defining the conn and cursor methods, cursor execute, conn.commit(), and conn and cursor close. This code seems to be repeated because it is required to connect and use the cursor method in the database. cursor.execute() seems to run the wanted code, whether it is update, delete, read, etc. conn.commit() appears that it commits the changes to the database in order to make the changes permanent. The closing of cursor and conn appears to be present because it is important be able to close the working connections and cursors in order to be able to have different ones. This is especially important when working with servers because it makes sure to have orderly code and prevents resources from being used unnecessarily.</li>
 </ul>
 </blockquote>
 
@@ -468,7 +483,9 @@ a- Look at conn object and cursor object in VSCode debugger.  What attributes ar
 <p>Uses a delete function to remove a user based on a user input of the id.</p>
 <ul>
 <li>Is DELETE a dangerous operation?  Why?</li>
+<li>DELETE can be a dangerous operation because it can remove information from the database, and if placed in the wrong hands, they could delete important information by accident. However, delete is also necessary in order to maintain a clean database with proper records.</li>
 <li>In the print statemements, what is the "f" and what does {uid} do?</li>
+<li>In the print statements, the "f" and {uid} allow the coder to include the selected uid without having to add multiple strings in the print statement. It allows for easy replacement and making a statement which uses the variable which the user called for.</li>
 </ul>
 </blockquote>
 
@@ -573,19 +590,51 @@ a- Look at conn object and cursor object in VSCode debugger.  What attributes ar
 </div>
 </div>
 
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">options</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'c'</span><span class="p">,</span> <span class="n">create</span><span class="p">),</span> <span class="p">(</span><span class="s1">'r'</span><span class="p">,</span> <span class="n">read</span><span class="p">),</span> <span class="p">(</span><span class="s1">'u'</span><span class="p">,</span> <span class="n">update</span><span class="p">),</span> <span class="p">(</span><span class="s1">'d'</span><span class="p">,</span> <span class="n">delete</span><span class="p">),</span> <span class="p">(</span><span class="s1">'s'</span><span class="p">,</span> <span class="n">schema</span><span class="p">)]</span>
+
+<span class="k">def</span> <span class="nf">rmenu</span><span class="p">():</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">operation</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter: (C)reate (R)ead (U)pdate or (D)elete or (S)chema"</span><span class="p">)</span>
+        <span class="n">found</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">op</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">operation</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">op</span><span class="p">:</span>
+                <span class="n">func</span><span class="p">()</span> <span class="c1"># call corresponding function</span>
+                <span class="n">found</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">break</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">found</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Please enter c, r, u, d, or s"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="c1"># Escape Key</span>
+            <span class="k">break</span>
+
+<span class="n">rmenu</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, 'Thomas Edison', 'toby', 'sha256$1DCsXlQkIHSMrEKK$d414364b6ab56e60742a5ca975ccc60a612f95da16a1daaf0ab31e246e123d31', '1847-02-11')
-(2, 'Nikola Tesla', 'niko', 'sha256$bgYVJxOd8ivCmnuK$212ab3368e0b60643301bfcf9d6d3076b9d8e56d582d46fb4af2424d46e18cb1', '2023-03-15')
-(3, 'Alexander Graham Bell', 'lex', 'sha256$kNUdnsrpLZMizqj5$49767b3007dc1fc7d61ec1d70d429b2a87d8d85e5093e4e7fa6f15099288776d', '2023-03-15')
+<pre>(2, 'Nikola Tesla', 'niko', 'sha256$bgYVJxOd8ivCmnuK$212ab3368e0b60643301bfcf9d6d3076b9d8e56d582d46fb4af2424d46e18cb1', '2023-03-15')
 (4, 'Eli Whitney', 'whit', 'sha256$wSGHrgPb0nX6xZhT$9155064fe01da3642a0afc65cf650ebc9b6dd12757c4289d7816c7ff196f6d82', '2023-03-15')
-(5, 'Indiana Jones', 'indi', 'sha256$tzvLp3REOlI7W8e4$2b624de5a58ad69797d4b4415248a0c31e12246fd967f0c894c6f1ee165201ac', '1920-10-21')
+(5, 'aditya', 'indi', 'sha256$fIj5b5J4EJxzKWKQ$38f9e9b086679a5635fab03ba1c57677811128a29f1cb21622642e494d907855', '1920-10-21')
 (6, 'Marion Ravenwood', 'raven', 'sha256$Ipcsu3bUlLybXqkT$db75b914c2411ddb753e6f21d8f0129de2167b7761312dbba3a040ee23d3a97b', '1921-10-21')
-(7, 'Aditya Anwandhar', 'Aditya Nawandhar', 'sha256$MbmJVkCzHP0iFo52$38041efc0547525af8b07d46f80c280a7ef45423ca04cd2757e4387bb441e775', '2023-03-15')
+(9, 'Thomas Edison', 'toby', 'sha256$ToTq1wbGeJ7vKvnw$f083549d8afd723b0e00d23d11dda31cf59bae1e955688c2e321c666f8587022', '1847-02-11')
+(10, 'Alexander Graham Bell', 'lex', 'sha256$Z3p5Da5uiokroaBm$9b632754fe2b79775bcdf16c5943207b601ceb08c0112fc2f8b0da4df9ed8802', '2023-03-17')
 </pre>
 </div>
 </div>
