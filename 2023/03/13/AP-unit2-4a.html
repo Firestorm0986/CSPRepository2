@@ -752,11 +752,11 @@ Records exist uid raven, or error.
     <span class="n">name</span> <span class="o">=</span> <span class="s2">"John"</span>
     <span class="n">uidfor</span> <span class="o">=</span> <span class="s2">"nav"</span>
     <span class="n">password</span> <span class="o">=</span> <span class="s2">"lex"</span>
-    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">userupdate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">userupdate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
                 <span class="n">userupdate</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="n">password</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"user not found"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"user not found"</span><span class="p">)</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="n">userupdate</span><span class="p">)</span>
 
@@ -777,13 +777,13 @@ Records exist uid raven, or error.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">DetachedInstanceError</span>                     Traceback (most recent call last)
 <span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 15</span> in <span class="ansi-cyan-fg">&lt;cell line: 15&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span>             print("user not found")
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span>         print("user not found")
 <span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span>     print(userupdate)
 <span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=14'&gt;15&lt;/a&gt;</span> updateq()
 
 <span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 15</span> in <span class="ansi-cyan-fg">updateq</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span>     else:
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span>         print("user not found")
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span> else:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span>     print("user not found")
 <span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> print(userupdate)
 
 <span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 15</span> in <span class="ansi-cyan-fg">User.__str__</span><span class="ansi-blue-fg">(self)</span>
@@ -850,7 +850,7 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalch
 <span class="ansi-green-intense-fg ansi-bold">   1374</span> has_key = bool(state.key)
 <span class="ansi-green-intense-fg ansi-bold">   1376</span> result = False
 
-<span class="ansi-red-fg">DetachedInstanceError</span>: Instance &lt;User at 0x7fed41908a00&gt; is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/14/bhk3)</pre>
+<span class="ansi-red-fg">DetachedInstanceError</span>: Instance &lt;User at 0x7fed419171c0&gt; is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/14/bhk3)</pre>
 </div>
 </div>
 
@@ -881,6 +881,20 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalch
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{"id": 12, "name": "John", "uid": "indi", "dob": "10-21-1920", "age": 102}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
