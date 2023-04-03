@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -184,11 +184,11 @@ window.onload = wrap_img;
 <span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  
 
 <span class="c1"># What do you notice in the output?</span>
-<span class="c1"># The output is inside curly brackets and </span>
-<span class="c1"># took out duplicate values</span>
+    <span class="c1"># The output is inside curly brackets and </span>
+    <span class="c1"># took out duplicate values</span>
 
 <span class="c1"># Why do you think Sets are in the same tech talk as Hashmaps/Hashtables?</span>
-<span class="c1"># both cannot have duplicates</span>
+    <span class="c1"># both cannot have duplicates</span>
 </pre></div>
 
     </div>
@@ -258,8 +258,7 @@ window.onload = wrap_img;
 <span class="p">}</span>
 
 <span class="c1"># What data structures do you see?</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+    <span class="c1"># dictionaries and lists</span>
 
 <span class="c1"># Printing the dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
@@ -365,7 +364,7 @@ The Man
 
 <span class="c1"># What can you change to make sure there are no duplicate producers?</span>
 <span class="c1">#</span>
-<span class="c1">#</span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s2">"producer"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">'Taylor Swift'</span><span class="p">,</span> <span class="s1">'Jack Antonoff'</span><span class="p">,</span> <span class="s1">'Joel Little'</span><span class="p">,</span> <span class="s1">'Taylor Swift'</span><span class="p">,</span> <span class="s1">'Louis Bell'</span><span class="p">,</span> <span class="s1">'Frank Dukes'</span><span class="p">])</span>
 
 <span class="c1"># Printing the dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
@@ -381,7 +380,7 @@ The Man
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight'}, 'producer': ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']}
+<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight'}, 'producer': {'Louis Bell', 'Jack Antonoff', 'Joel Little', 'Frank Dukes', 'Taylor Swift'}}
 </pre>
 </div>
 </div>
@@ -406,7 +405,8 @@ The Man
 <span class="c1"># </span>
 
 <span class="c1"># Printing the dictionary</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"electropop"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span> 
 </pre></div>
 
     </div>
@@ -419,7 +419,7 @@ The Man
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight', 19: 'All Of The Girls You Loved Before'}, 'producer': ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']}
+<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop', 'electropop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight', 19: 'All Of The Girls You Loved Before'}, 'producer': {'Louis Bell', 'Jack Antonoff', 'Joel Little', 'Frank Dukes', 'Taylor Swift'}}
 </pre>
 </div>
 </div>
@@ -460,9 +460,9 @@ The Man
 <pre>title: Lover
 artist: Taylor Swift
 year: 2019
-genre: ['Pop', 'Synth-pop']
-tracks: {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight', 19: 'All Of The Girls You Loved Before'}
-producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']
+genre: ['Pop', 'Synth-pop', 'electropop']
+tracks: {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight', 19: 'All Of The Girls You Loved Before', 20: 'IDK any'}
+producer: {'Louis Bell', 'Jack Antonoff', 'Joel Little', 'Frank Dukes', 'Taylor Swift'}
 1:I Forgot That You Existed
 2:Cruel Summer
 3:Lover
@@ -482,6 +482,7 @@ producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Loui
 17:It's Nice To Have A Friend
 18:Daylight
 19:All Of The Girls You Loved Before
+20:IDK any
 </pre>
 </div>
 </div>
@@ -510,9 +511,104 @@ producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Loui
 
 <span class="c1"># This is a very basic code segment, how can you improve upon this code?</span>
 <span class="c1">#</span>
+
+<span class="k">def</span> <span class="nf">search2</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="n">start</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to know about the album?"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid Search"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">start</span><span class="o">.</span><span class="n">lower</span> <span class="o">==</span> <span class="s2">"tracks"</span><span class="p">:</span>
+        <span class="n">slay</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"do you want to update? "</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">slay</span><span class="o">.</span><span class="n">lower</span> <span class="o">==</span> <span class="s2">"no"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">slay</span><span class="o">.</span><span class="n">lower</span> <span class="o">==</span> <span class="s2">"yes"</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">])</span>
+            <span class="n">update</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"change one of them names"</span><span class="p">)</span>
+            <span class="n">update2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"change one of them numbers"</span><span class="p">))</span>
+            <span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">update2</span><span class="p">:</span> <span class="n">update</span><span class="p">})</span>
+    <span class="k">elif</span> <span class="n">start</span><span class="o">.</span><span class="n">lower</span> <span class="o">==</span> <span class="s2">"title"</span> <span class="ow">or</span> <span class="s2">"artist"</span> <span class="ow">or</span> <span class="s2">"year"</span><span class="p">:</span>
+        <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+
+    
+    
+
+    
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Invalid Search
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">search2</span><span class="p">():</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to know about the album?"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        
+
+
+    <span class="k">if</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Invalid Search"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">start</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"tracks"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">l</span> <span class="o">+</span> <span class="n">s</span> <span class="k">for</span> <span class="n">l</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">])</span>
+        <span class="n">update</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"change one of them names"</span><span class="p">)</span>
+        <span class="n">update2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"change one of them numbers"</span><span class="p">))</span>
+        <span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">update2</span><span class="p">:</span> <span class="n">update</span><span class="p">})</span>
+    <span class="k">elif</span> <span class="n">start</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"title"</span> <span class="ow">or</span> <span class="s2">"artist"</span> <span class="ow">or</span> <span class="s2">"year"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"run 2"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+
+
+
+<span class="n">search2</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>title
+artist
+year
+genre
+tracks
+producer
+&lt;generator object search2.&lt;locals&gt;.&lt;genexpr&gt; at 0x7f36c48df660&gt;
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -528,41 +624,41 @@ producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Loui
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">albums</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">(</span><span class="s2">"Welcome to my Nightmare"</span><span class="p">,</span> <span class="s2">"Alice Cooper"</span><span class="p">,</span> <span class="mi">1975</span><span class="p">,</span>
-     <span class="p">[</span>
-         <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"Welcome to my Nightmare"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">"Devil's Food"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"The Black Widow"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s2">"Some Folks"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">"Only Women Bleed"</span><span class="p">),</span>
-     <span class="p">]</span>
+     <span class="p">{</span>
+         <span class="mi">1</span><span class="p">:</span> <span class="s2">"Welcome to my Nightmare"</span><span class="p">,</span>
+         <span class="mi">2</span><span class="p">:</span> <span class="s2">"Devil's Food"</span><span class="p">,</span>
+         <span class="mi">3</span><span class="p">:</span> <span class="s2">"The Black Widow"</span><span class="p">,</span>
+         <span class="mi">4</span><span class="p">:</span> <span class="s2">"Some Folks"</span><span class="p">,</span>
+         <span class="mi">5</span><span class="p">:</span> <span class="s2">"Only Women Bleed"</span><span class="p">,</span>
+     <span class="p">}</span>
      <span class="p">),</span>
     <span class="p">(</span><span class="s2">"Bad Company"</span><span class="p">,</span> <span class="s2">"Bad Company"</span><span class="p">,</span> <span class="mi">1974</span><span class="p">,</span>
-     <span class="p">[</span>
-         <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"Can't Get Enough"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">"Rock Steady"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"Ready for Love"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s2">"Don't Let Me Down"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">"Bad Company"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s2">"The Way I Choose"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s2">"Movin' On"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="s2">"Seagull"</span><span class="p">),</span>
-     <span class="p">]</span>
+     <span class="p">{</span>
+         <span class="mi">1</span><span class="p">:</span> <span class="s2">"Can't Get Enough"</span><span class="p">,</span>
+         <span class="mi">2</span><span class="p">:</span> <span class="s2">"Rock Steady"</span><span class="p">,</span>
+         <span class="mi">3</span><span class="p">:</span> <span class="s2">"Ready for Love"</span><span class="p">,</span>
+         <span class="mi">4</span><span class="p">:</span> <span class="s2">"Don't Let Me Down"</span><span class="p">,</span>
+         <span class="mi">5</span><span class="p">:</span> <span class="s2">"Bad Company"</span><span class="p">,</span>
+         <span class="mi">6</span><span class="p">:</span> <span class="s2">"The Way I Choose"</span><span class="p">,</span>
+         <span class="mi">7</span><span class="p">:</span> <span class="s2">"Movin' On"</span><span class="p">,</span>
+         <span class="mi">8</span><span class="p">:</span> <span class="s2">"Seagull"</span><span class="p">,</span>
+     <span class="p">}</span>
      <span class="p">),</span>
     <span class="p">(</span><span class="s2">"Nightflight"</span><span class="p">,</span> <span class="s2">"Budgie"</span><span class="p">,</span> <span class="mi">1981</span><span class="p">,</span>
-     <span class="p">[</span>
-         <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"I Turned to Stone"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">"Keeping a Rendezvous"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"Reaper of the Glory"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s2">"She Used Me Up"</span><span class="p">),</span>
-     <span class="p">]</span>
+     <span class="p">{</span>
+         <span class="mi">1</span><span class="p">:</span> <span class="s2">"I Turned to Stone"</span><span class="p">,</span>
+         <span class="mi">2</span><span class="p">:</span> <span class="s2">"Keeping a Rendezvous"</span><span class="p">,</span>
+         <span class="mi">3</span><span class="p">:</span> <span class="s2">"Reaper of the Glory"</span><span class="p">,</span>
+         <span class="mi">4</span><span class="p">:</span> <span class="s2">"She Used Me Up"</span><span class="p">,</span>
+     <span class="p">}</span>
      <span class="p">),</span>
     <span class="p">(</span><span class="s2">"More Mayhem"</span><span class="p">,</span> <span class="s2">"Imelda May"</span><span class="p">,</span> <span class="mi">2011</span><span class="p">,</span>
-     <span class="p">[</span>
-         <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"Pulling the Rug"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">"Psycho"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">"Mayhem"</span><span class="p">),</span>
-         <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s2">"Kentish Town Waltz"</span><span class="p">),</span>
-     <span class="p">]</span>
+     <span class="p">{</span>
+         <span class="mi">1</span><span class="p">:</span> <span class="s2">"Pulling the Rug"</span><span class="p">,</span>
+         <span class="mi">2</span><span class="p">:</span> <span class="s2">"Psycho"</span><span class="p">,</span>
+         <span class="mi">3</span><span class="p">:</span> <span class="s2">"Mayhem"</span><span class="p">,</span>
+         <span class="mi">4</span><span class="p">:</span> <span class="s2">"Kentish Town Waltz"</span><span class="p">,</span>
+     <span class="p">}</span>
      <span class="p">),</span>
 <span class="p">]</span>
 
@@ -579,13 +675,9 @@ producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Loui
     <span class="k">else</span><span class="p">:</span>
         <span class="k">break</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Please choose your song:"</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">track_number</span><span class="p">,</span> <span class="n">song</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">songs_list</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">song</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">song</span> <span class="ow">in</span> <span class="n">songs_list</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">,</span><span class="n">song</span><span class="p">))</span>
     <span class="n">song_choice</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-    <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">song_choice</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">songs_list</span><span class="p">):</span>
-        <span class="n">title</span> <span class="o">=</span> <span class="n">songs_list</span><span class="p">[</span><span class="n">song_choice</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">SONG_TITLE_INDEX</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">break</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="s2">"playing </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
@@ -608,15 +700,12 @@ producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Loui
 3: Nightflight
 4: More Mayhem
 Please choose your song:
-0: Can't Get Enough
-1: Rock Steady
-2: Ready for Love
-3: Don't Let Me Down
-4: Bad Company
-5: The Way I Choose
-6: Movin' On
-7: Seagull
-playing Ready for Love
+1: Welcome to my Nightmare
+2: Devil's Food
+3: The Black Widow
+4: Some Folks
+5: Only Women Bleed
+playing More Mayhem
 ========================================
 </pre>
 </div>
@@ -649,6 +738,15 @@ playing Ready for Love
 <p>For Mr. Yeung's class: Justify your favorite Taylor Swift song, answer may effect seed</p>
 </li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://user-images.githubusercontent.com/108041389/229421906-5ef8cc77-4a69-49a2-9e7b-6366abf6222a.png" alt="image">
+<img src="https://user-images.githubusercontent.com/108041389/229422006-5801b266-7c03-4b33-9317-9b68db4c92ab.png" alt="image"></p>
 
 </div>
 </div>
