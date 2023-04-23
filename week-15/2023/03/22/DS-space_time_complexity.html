@@ -952,6 +952,22 @@ Time taken: 3.238527536392212 seconds
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -963,7 +979,7 @@ Time taken: 3.238527536392212 seconds
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span> <span class="k">as</span> <span class="n">sq</span>
-<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">85248289</span><span class="p">,</span><span class="mi">22297284</span><span class="p">,</span><span class="mi">18939904</span><span class="p">,</span><span class="mi">91107025</span><span class="p">,</span><span class="mi">69122596</span><span class="p">,</span><span class="mi">9721924</span><span class="p">,</span><span class="mi">37810201</span><span class="p">,</span><span class="mi">1893294144</span><span class="p">,</span><span class="mi">8722812816</span><span class="p">,</span><span class="mi">644398225</span><span class="p">]</span>
+<span class="n">test_cases</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">85248289</span><span class="p">,</span><span class="mi">22297284</span><span class="p">,</span><span class="mi">18939904</span><span class="p">,</span><span class="mi">91107025</span><span class="p">,</span><span class="mi">69122596</span><span class="p">,</span><span class="mi">9721924</span><span class="p">,</span><span class="mi">37810201</span><span class="p">,</span><span class="mi">1893294144</span><span class="p">,</span><span class="mi">8722812816</span><span class="p">,</span><span class="mi">644398225</span><span class="p">]</span>
 <span class="n">answers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">sq</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">checkValid</span><span class="p">():</span>
@@ -1021,16 +1037,46 @@ Check number 13 passed
         <span class="k">return</span> <span class="n">inti</span>
     
     <span class="k">while</span> <span class="n">inti</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">//</span><span class="mi">2</span> <span class="o">==</span> <span class="n">inti</span><span class="o">//</span><span class="mi">2</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">/</span><span class="mi">2</span> <span class="o">==</span> <span class="n">inti</span><span class="o">/</span><span class="mi">2</span><span class="p">:</span>
                 <span class="n">inti</span> <span class="o">=</span> <span class="n">inti</span> <span class="o">-</span> <span class="n">inti</span>
                 <span class="k">return</span> <span class="n">x</span>
                 
             <span class="k">else</span><span class="p">:</span> 
                 <span class="k">pass</span>
+
+<span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-22-DS-space_time_complexity.ipynb Cell 41</span> in <span class="ansi-cyan-fg">&lt;cell line: 14&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-22-DS-space_time_complexity.ipynb#X55sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span>             else: 
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-22-DS-space_time_complexity.ipynb#X55sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span>                 pass
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-22-DS-space_time_complexity.ipynb#X55sdnNjb2RlLXJlbW90ZQ%3D%3D?line=13'&gt;14&lt;/a&gt;</span> sqrt(3)
+
+<span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-22-DS-space_time_complexity.ipynb Cell 41</span> in <span class="ansi-cyan-fg">sqrt</span><span class="ansi-blue-fg">(inti)</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-22-DS-space_time_complexity.ipynb#X55sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span>     return inti
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-22-DS-space_time_complexity.ipynb#X55sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span> while inti &gt; 1:
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-22-DS-space_time_complexity.ipynb#X55sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span>     for x in range(1, 10):
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-22-DS-space_time_complexity.ipynb#X55sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span>         if x*x/2 == inti/2:
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-22-DS-space_time_complexity.ipynb#X55sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span>             inti = inti - inti
+
+<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
+</div>
+</div>
+
 </div>
 </div>
 

@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      18 min read
+      16 min read
     
 </span></p>
 
@@ -404,7 +404,6 @@ window.onload = wrap_img;
             <span class="bp">self</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-        
         <span class="k">return</span> <span class="bp">self</span>
 
     <span class="c1"># CRUD delete: remove self</span>
@@ -494,12 +493,12 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Records exist uid toby, or error.
-Records exist uid niko, or error.
-Records exist uid lex, or error.
-Records exist uid whit, or error.
-Records exist uid indi, or error.
-Records exist uid raven, or error.
+<pre>Created new uid toby
+Created new uid niko
+Created new uid lex
+Created new uid whit
+Created new uid indi
+Created new uid raven
 </pre>
 </div>
 </div>
@@ -640,8 +639,8 @@ Records exist uid raven, or error.
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Found
- {'id': 13, 'name': 'John', 'uid': '', 'dob': '03-20-2023', 'age': 0}
+<pre>Created
+ {'id': 7, 'name': 'Aditya', 'uid': 'adi', 'dob': '01-01-2023', 'age': 0}
 </pre>
 </div>
 </div>
@@ -701,157 +700,39 @@ Records exist uid raven, or error.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[{'id': 2,
+<pre>[{'id': 1,
+  'name': 'Thomas Edison',
+  'uid': 'toby',
+  'dob': '02-11-1847',
+  'age': 176},
+ {'id': 2,
   'name': 'Nikola Tesla',
   'uid': 'niko',
-  'dob': '03-15-2023',
+  'dob': '04-09-2023',
+  'age': 0},
+ {'id': 3,
+  'name': 'Alexander Graham Bell',
+  'uid': 'lex',
+  'dob': '04-09-2023',
   'age': 0},
  {'id': 4,
   'name': 'Eli Whitney',
   'uid': 'whit',
-  'dob': '03-15-2023',
+  'dob': '04-09-2023',
   'age': 0},
+ {'id': 5,
+  'name': 'Indiana Jones',
+  'uid': 'indi',
+  'dob': '10-21-1920',
+  'age': 102},
  {'id': 6,
   'name': 'Marion Ravenwood',
   'uid': 'raven',
   'dob': '10-21-1921',
   'age': 101},
- {'id': 9,
-  'name': 'Thomas Edison',
-  'uid': 'toby',
-  'dob': '02-11-1847',
-  'age': 176},
- {'id': 10,
-  'name': 'Alexander Graham Bell',
-  'uid': 'lex',
-  'dob': '03-17-2023',
-  'age': 0},
- {'id': 11, 'name': 'Joe', 'uid': 'Joe', 'dob': '12-12-2022', 'age': 0},
- {'id': 12, 'name': 'John', 'uid': 'indi', 'dob': '10-21-1920', 'age': 102},
- {'id': 13, 'name': 'John', 'uid': '', 'dob': '03-20-2023', 'age': 0}]</pre>
+ {'id': 7, 'name': 'Aditya', 'uid': 'adi', 'dob': '01-01-2023', 'age': 0}]</pre>
 </div>
 
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">updateq</span><span class="p">():</span>
-    <span class="n">uidcheck</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your User id: "</span><span class="p">)</span>
-    <span class="n">userupdate</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uidcheck</span><span class="p">)</span>  
-    <span class="n">name</span> <span class="o">=</span> <span class="s2">"John"</span>
-    <span class="n">uidfor</span> <span class="o">=</span> <span class="s2">"nav"</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="s2">"lex"</span>
-    <span class="k">if</span> <span class="n">userupdate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
-                <span class="n">userupdate</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="n">password</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"user not found"</span><span class="p">)</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="n">userupdate</span><span class="p">)</span>
-
-<span class="n">updateq</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">DetachedInstanceError</span>                     Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 15</span> in <span class="ansi-cyan-fg">&lt;cell line: 15&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span>         print("user not found")
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span>     print(userupdate)
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=14'&gt;15&lt;/a&gt;</span> updateq()
-
-<span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 15</span> in <span class="ansi-cyan-fg">updateq</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span> else:
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span>     print("user not found")
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> print(userupdate)
-
-<span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 15</span> in <span class="ansi-cyan-fg">User.__str__</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=98'&gt;99&lt;/a&gt;</span> def __str__(self):
-<span class="ansi-green-fg">--&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=99'&gt;100&lt;/a&gt;</span>     return json.dumps(self.read())
-
-<span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 15</span> in <span class="ansi-cyan-fg">User.read</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=115'&gt;116&lt;/a&gt;</span> def read(self):
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=116'&gt;117&lt;/a&gt;</span>     return {
-<span class="ansi-green-fg">--&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=117'&gt;118&lt;/a&gt;</span>         "id": self.id,
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=118'&gt;119&lt;/a&gt;</span>         "name": self.name,
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=119'&gt;120&lt;/a&gt;</span>         "uid": self.uid,
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=120'&gt;121&lt;/a&gt;</span>         "dob": self.dob,
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=121'&gt;122&lt;/a&gt;</span>         "age": self.age,
-<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X25sdnNjb2RlLXJlbW90ZQ%3D%3D?line=122'&gt;123&lt;/a&gt;</span>     }
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py:481</span>, in <span class="ansi-cyan-fg">InstrumentedAttribute.__get__</span><span class="ansi-blue-fg">(self, instance, owner)</span>
-<span class="ansi-green-intense-fg ansi-bold">    476</span> except AttributeError as err:
-<span class="ansi-green-intense-fg ansi-bold">    477</span>     util.raise_(
-<span class="ansi-green-intense-fg ansi-bold">    478</span>         orm_exc.UnmappedInstanceError(instance),
-<span class="ansi-green-intense-fg ansi-bold">    479</span>         replace_context=err,
-<span class="ansi-green-intense-fg ansi-bold">    480</span>     )
-<span class="ansi-green-fg">--&gt; 481</span> return self.impl.get(state, dict_)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py:941</span>, in <span class="ansi-cyan-fg">AttributeImpl.get</span><span class="ansi-blue-fg">(self, state, dict_, passive)</span>
-<span class="ansi-green-intense-fg ansi-bold">    938</span> if not passive &amp; CALLABLES_OK:
-<span class="ansi-green-intense-fg ansi-bold">    939</span>     return PASSIVE_NO_RESULT
-<span class="ansi-green-fg">--&gt; 941</span> value = self._fire_loader_callables(state, key, passive)
-<span class="ansi-green-intense-fg ansi-bold">    943</span> if value is PASSIVE_NO_RESULT or value is NO_VALUE:
-<span class="ansi-green-intense-fg ansi-bold">    944</span>     return value
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/attributes.py:972</span>, in <span class="ansi-cyan-fg">AttributeImpl._fire_loader_callables</span><span class="ansi-blue-fg">(self, state, key, passive)</span>
-<span class="ansi-green-intense-fg ansi-bold">    966</span> def _fire_loader_callables(self, state, key, passive):
-<span class="ansi-green-intense-fg ansi-bold">    967</span>     if (
-<span class="ansi-green-intense-fg ansi-bold">    968</span>         self.accepts_scalar_loader
-<span class="ansi-green-intense-fg ansi-bold">    969</span>         and self.load_on_unexpire
-<span class="ansi-green-intense-fg ansi-bold">    970</span>         and key in state.expired_attributes
-<span class="ansi-green-intense-fg ansi-bold">    971</span>     ):
-<span class="ansi-green-fg">--&gt; 972</span>         return state._load_expired(state, passive)
-<span class="ansi-green-intense-fg ansi-bold">    973</span>     elif key in state.callables:
-<span class="ansi-green-intense-fg ansi-bold">    974</span>         callable_ = state.callables[key]
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/state.py:710</span>, in <span class="ansi-cyan-fg">InstanceState._load_expired</span><span class="ansi-blue-fg">(self, state, passive)</span>
-<span class="ansi-green-intense-fg ansi-bold">    703</span> toload = self.expired_attributes.intersection(self.unmodified)
-<span class="ansi-green-intense-fg ansi-bold">    704</span> toload = toload.difference(
-<span class="ansi-green-intense-fg ansi-bold">    705</span>     attr
-<span class="ansi-green-intense-fg ansi-bold">    706</span>     for attr in toload
-<span class="ansi-green-intense-fg ansi-bold">    707</span>     if not self.manager[attr].impl.load_on_unexpire
-<span class="ansi-green-intense-fg ansi-bold">    708</span> )
-<span class="ansi-green-fg">--&gt; 710</span> self.manager.expired_attribute_loader(self, toload, passive)
-<span class="ansi-green-intense-fg ansi-bold">    712</span> # if the loader failed, or this
-<span class="ansi-green-intense-fg ansi-bold">    713</span> # instance state didn't have an identity,
-<span class="ansi-green-intense-fg ansi-bold">    714</span> # the attributes still might be in the callables
-<span class="ansi-green-intense-fg ansi-bold">    715</span> # dict.  ensure they are removed.
-<span class="ansi-green-intense-fg ansi-bold">    716</span> self.expired_attributes.clear()
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/loading.py:1369</span>, in <span class="ansi-cyan-fg">load_scalar_attributes</span><span class="ansi-blue-fg">(mapper, state, attribute_names, passive)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1367</span> session = state.session
-<span class="ansi-green-intense-fg ansi-bold">   1368</span> if not session:
-<span class="ansi-green-fg">-&gt; 1369</span>     raise orm_exc.DetachedInstanceError(
-<span class="ansi-green-intense-fg ansi-bold">   1370</span>         "Instance %s is not bound to a Session; "
-<span class="ansi-green-intense-fg ansi-bold">   1371</span>         "attribute refresh operation cannot proceed" % (state_str(state))
-<span class="ansi-green-intense-fg ansi-bold">   1372</span>     )
-<span class="ansi-green-intense-fg ansi-bold">   1374</span> has_key = bool(state.key)
-<span class="ansi-green-intense-fg ansi-bold">   1376</span> result = False
-
-<span class="ansi-red-fg">DetachedInstanceError</span>: Instance &lt;User at 0x7fed419171c0&gt; is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/14/bhk3)</pre>
-</div>
 </div>
 
 </div>
@@ -890,7 +771,49 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalch
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{"id": 12, "name": "John", "uid": "indi", "dob": "10-21-1920", "age": 102}
+<pre>{"id": 7, "name": "John", "uid": "adi", "dob": "01-01-2023", "age": 0}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">updateu</span><span class="p">():</span>
+    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your user id:"</span><span class="p">)</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to change your name to?"</span><span class="p">)</span>
+            <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to change your password to?"</span><span class="p">)</span>
+            <span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Updated"</span><span class="p">,</span> <span class="n">uid</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error with </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">updateu</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Updated indi
 </pre>
 </div>
 </div>
