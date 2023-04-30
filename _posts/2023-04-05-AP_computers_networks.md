@@ -25,15 +25,23 @@ List specification of your Computer, or Computers if working as Pair/Trio
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
 - Input devices
-> - 
+> - These are devices that allow users to input data or commands into a computer. Examples include a keyboard, mouse-pad, microphone, and scanner/webcam.
 - Output devices
+> - These are devices that allow a computer to communicate information back to the user. Examples include a monitor, printer, and speakers.
 - Program File
+> - A program file is a file that contains instructions for a computer program to execute. Examples include an executable file (.exe), a script file (.sh), and a batch file (.bat).
 - Program Code
+> - Program code is a set of instructions written in a programming language that tells a computer what to do.
 - Processes
+> - A process is a program that is currently running on a computer.
 - Ports
+> - A port is a physical interface on a computer that allows it to connect to other devices. Examples include USB ports, HDMI ports, and Ethernet ports. Ports
 - Data File
+> - A data file is a file that contains information that can be used by a computer program. Examples include a text file (.txt), a spreadsheet file (.xls), and an image file (.jpg).
 - Inspect Running Code
+> - Inspecting running code allows programmers to monitor the behavior of their programs as they run.
 - Inspect Variables
+> - Inspecting variables allows programmers to view the current values of variables in their programs.
 
 
 ![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
@@ -54,11 +62,16 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 - Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use `traceroute` and `ping` commands from Linux Terminal.  
     - Path 
+    > - A sequence of directly connected computing devices that begins at the sender and ends at the receiver.
     - Route
+    > - The process of finding a path from sender to receiver.
     - Computer System
+    > - A group of computing devices and programs working together for a common purpose.
     - Computer Device
+    > - A physical artifact that can run a program, such as a computer, tablet, or smart sensor.
     - Bandwidth
-    - Computer Network
+    > - The maximum amount of data that can be sent in a fixed amount of time.
+        Computer Network - A group of interconnected computing devices capable of sending or receiving data.
 
 > Watch/review College Board Daily Video 4.1.2
 
@@ -115,13 +128,15 @@ The "network" layer is responsible for ***routing data packets between networks*
 > Watch both Daily videos for 4.2
 
 - Complete the network activity, summarize your understanding of fault tolerance.
-
+> - Fault tolerance is the ability of a system to continue operating in the event of a hardware or software failure. It involves designing a system in such a way that it can detect and recover from errors or failures without causing disruption or data loss. Fault tolerance can be achieved through a variety of techniques such as redundancy, replication, and graceful degradation.
 
 ### Parallel and Distributed Computing
 > Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
 - What is naturally Distributed in Frontend/Backend archeticture?  
+>  - In a frontend/backend architecture, the frontend is typically distributed naturally across multiple clients, such as web browsers or mobile devices. Each client runs its own instance of the frontend code and interacts with the backend over the network.
 
+On the other hand, the backend is usually centralized and runs on one or more servers. The backend code typically handles tasks such as data storage, processing, and business logic, and serves data and functionality to the frontend clients over the network.
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
 
 
@@ -161,5 +176,39 @@ result = ray.get(part1_result) + ray.get(part2_result)
 
 # print the result
 print(result)
+
+```
+
+```python
+
+import ray
+import numpy as np
+from PIL import Image
+
+ray.init()
+
+# Define a function to process a single image tile
+@ray.remote
+def process_tile(tile):
+    # Do some image processing on the tile
+    processed_tile = np.mean(tile, axis=-1)
+    return processed_tile
+
+# Load the image and break it up into tiles
+image = Image.open('my_image.jpg')
+tile_size = (256, 256)
+tiles = [np.array(image.crop((x, y, x+tile_size[0], y+tile_size[1]))) 
+         for x in range(0, image.width, tile_size[0]) 
+         for y in range(0, image.height, tile_size[1])]
+
+# Process the tiles in parallel using Ray
+results = ray.get([process_tile.remote(tile) for tile in tiles])
+
+# Combine the processed tiles into a single output image
+output = np.vstack([np.hstack(row) for row in np.split(results, image.height // tile_size[1])])
+output_image = Image.fromarray(output.astype(np.uint8))
+
+# Save the output image
+output_image.save('processed_image.jpg')
 
 ```
