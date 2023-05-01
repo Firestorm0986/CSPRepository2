@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data Structures Guide | MyPortfolio - Aditya</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Data Structures Guide" />
+<meta name="author" content="Team EAAR, Ethan Tran, Alex Kumar, Advay Shindikar, Amay Advani, Rohin Sood" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A guide to data structures such as lists, dictionaries, 2D arrays, and iteration" />
+<meta property="og:description" content="A guide to data structures such as lists, dictionaries, 2D arrays, and iteration" />
+<link rel="canonical" href="https://firestorm0986.github.io/CSPrepository2/2023/04/27/P4M-DataStructures-TeamEAAR.html" />
+<meta property="og:url" content="https://firestorm0986.github.io/CSPrepository2/2023/04/27/P4M-DataStructures-TeamEAAR.html" />
+<meta property="og:site_name" content="MyPortfolio - Aditya" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-27T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Structures Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Team EAAR, Ethan Tran, Alex Kumar, Advay Shindikar, Amay Advani, Rohin Sood"},"dateModified":"2023-04-27T00:00:00-05:00","datePublished":"2023-04-27T00:00:00-05:00","description":"A guide to data structures such as lists, dictionaries, 2D arrays, and iteration","headline":"Data Structures Guide","mainEntityOfPage":{"@type":"WebPage","@id":"https://firestorm0986.github.io/CSPrepository2/2023/04/27/P4M-DataStructures-TeamEAAR.html"},"url":"https://firestorm0986.github.io/CSPrepository2/2023/04/27/P4M-DataStructures-TeamEAAR.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CSPrepository2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://firestorm0986.github.io/CSPrepository2/feed.xml" title="MyPortfolio - Aditya" /><link rel="shortcut icon" type="image/x-icon" href="/CSPrepository2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/CSPrepository2/">MyPortfolio - Aditya</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/CSPrepository2/about/">About Me</a><a class="page-link" href="/CSPrepository2/_pages/02_2022-08-24-notes.html">Notes</a><a class="page-link" href="/CSPrepository2/search/">Search</a><a class="page-link" href="/CSPrepository2/categories/">Tags</a><a class="page-link" href="/CSPrepository2/_pages/05_2022-08-27-Physics.html">Physics</a><a class="page-link" href="/CSPrepository2/_pages/06_2022-09-04-My-Work.html">MyWork</a><a class="page-link" href="/CSPrepository2/_pages/07_2022-09-25-submenu.html">Submenu</a><a class="page-link" href="/CSPrepository2/_pages/08_2023-01-16-CRUD.html">CRUD</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Data Structures Guide</h1><p class="page-description">A guide to data structures such as lists, dictionaries, 2D arrays, and iteration</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-27T00:00:00-05:00" itemprop="datePublished">
+        Apr 27, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Team EAAR, Ethan Tran, Alex Kumar, Advay Shindikar, Amay Advani, Rohin Sood</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      12 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Firestorm0986/CSPrepository2/tree/master/_notebooks/2023-04-27-P4M-DataStructures-TeamEAAR.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/CSPrepository2/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Firestorm0986/CSPrepository2/master?filepath=_notebooks%2F2023-04-27-P4M-DataStructures-TeamEAAR.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSPrepository2/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Firestorm0986/CSPrepository2/blob/master/_notebooks/2023-04-27-P4M-DataStructures-TeamEAAR.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSPrepository2/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FFirestorm0986%2FCSPrepository2%2Fblob%2Fmaster%2F_notebooks%2F2023-04-27-P4M-DataStructures-TeamEAAR.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/CSPrepository2/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-27-P4M-DataStructures-TeamEAAR.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Objectives:">Objectives:<a class="anchor-link" href="#Objectives:"> </a></h2><p>Students will be able to...</p>
+<ul>
+<li>Understand the concept of data structures, including lists, dictionaries, and 2D arrays</li>
+<li>Learn how to iterate through data structures using loops</li>
+<li>Able to visualize data structures and iteration processes</li>
+<li>Able to apply their knowledge to build simulations/interactions using lists and iteration</li>
+<li>Learn how to store list and dictionary content in databases</li>
+</ul>
+<h1 id="Lesson-1:-Lists-and-Iteration">Lesson 1: Lists and Iteration<a class="anchor-link" href="#Lesson-1:-Lists-and-Iteration"> </a></h1><h2 id="Lists-(Ethan)">Lists (Ethan)<a class="anchor-link" href="#Lists-(Ethan)"> </a></h2><ul>
+<li>Lists are a type of data structure that can store multiple items in a single variable</li>
+<li>Lists are defined using square brackets [ ]</li>
+<li>Each item in a list is separated by a comma</li>
+<li>Lists are indexed, starting at 0 </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;grape&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;, &#39;grape&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Accessing-Lists">Accessing Lists<a class="anchor-link" href="#Accessing-Lists"> </a></h2><ul>
+<li>To access individual items in a list, we use the index of the item.</li>
+<li>Python uses zero-based indexing, which means the first item in the list has an index of 0, the second item has an index of 1, and so on.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>   
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>apple
+orange
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Slicing-Lists">Slicing Lists<a class="anchor-link" href="#Slicing-Lists"> </a></h2><ul>
+<li>We can also extract a specific portion of a list using slicing.</li>
+<li>We use the colon : operator to specify a range of indices to include.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;banana&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Modifying-List-Items">Modifying List Items<a class="anchor-link" href="#Modifying-List-Items"> </a></h2><ul>
+<li>Lists are mutable, meaning that we can change the value of an item in a list.</li>
+<li>To change the value of an item in a list, we can use the indexing operator (square brackets) to access the item and then assign a new value to it.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pear&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;banana&#39;, &#39;pear&#39;, &#39;grape&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Adding-and-Removing-List-Items">Adding and Removing List Items<a class="anchor-link" href="#Adding-and-Removing-List-Items"> </a></h2><blockquote><p>Adding</p>
+</blockquote>
+<ul>
+<li>Use the append() method to add an item to the end of a list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;kiwi&quot;</span><span class="p">)</span> <span class="c1"># Adds &#39;kiwi&#39; to the end of the list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;banana&#39;, &#39;pear&#39;, &#39;grape&#39;, &#39;kiwi&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use the insert() method to add an item to a specific index in a list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="p">)</span> <span class="c1"># Inserts &quot;peach&quot; at index 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;peach&#39;, &#39;banana&#39;, &#39;pear&#39;, &#39;grape&#39;, &#39;kiwi&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Removing</p>
+</blockquote>
+<ul>
+<li>Use the remove() method to remove the first occurrence of an item from a list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;pear&#39;</span><span class="p">)</span> <span class="c1"># Removes the first occurrence of &#39;pear&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;peach&#39;, &#39;banana&#39;, &#39;grape&#39;, &#39;kiwi&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use the pop() method to remove the item at a specific index from a list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Removes the item at index 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;peach&#39;, &#39;grape&#39;, &#39;kiwi&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use the clear() method to remove all items from a list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> <span class="c1"># Removes all items from the list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Function-Explanation">Function Explanation<a class="anchor-link" href="#Function-Explanation"> </a></h2><blockquote><p>InsertToList</p>
+</blockquote>
+<ul>
+<li>This function is designed to insert a new item into a list at a specific index.</li>
+<li>It first retrieves the new item to be added and the index at which to add it from the HTML document.</li>
+<li>It checks if the retrieved values are both valid integers and if the index is within the range of the list.</li>
+<li>If the values are valid, the function uses the splice() method to insert the new item into the list at the specified index. </li>
+<li>In JavaScript, the splice() method modifies an array by removing, replacing, or adding elements.</li>
+<li>The splice() method takes three arguments:the index at which to start changing the list, the number of elements to remove, and the new item to add. - The item is inserted without removing any elements, so we pass 0 as the second argument.</li>
+<li>Finally, the function calls the visualizeList() function to display the updated list on the web page.</li>
+</ul>
+
+<pre><code>  // Get the value of the new item and the index where it should be inserted
+  function insertToList() {
+      let newItem = parseInt(document.getElementById("newItem").value);
+      let index = parseInt(document.getElementById("index").value);
+      if (!isNaN(newItem) &amp;&amp; !isNaN(index) &amp;&amp; index &gt;= 0 &amp;&amp; index &lt;= myList.length) {
+        // splice() method to insert the new item into the list
+        myList.splice(index - 1, 0, newItem);
+        // Call the visualizeList() function to update the display of the list
+        visualizeList();
+      }
+    }</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>SortList</p>
+</blockquote>
+<ul>
+<li>In JavaScript, sort() is a built-in method used to sort the elements of an array in place. The default sort order is ascending, but you can also specify a descending sort order.</li>
+<li>In this case, the function sorts myList in ascending order based on their numerical value.</li>
+</ul>
+
+<pre><code>  // Sort myList array in ascending order     
+  function sortList() {
+      // The function a - b is used, which subtracts the second element b from the first element a. 
+      // If the result is negative, a is sorted before b. If the result is positive, b is sorted before a. If the result is zero, the order of the elements is unchanged.
+      myList.sort((a, b) =&gt; a - b);
+      visualizeList();
+    }</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Applications-of-Lists">Applications of Lists<a class="anchor-link" href="#Applications-of-Lists"> </a></h2><ul>
+<li><p>Data processing: Lists are commonly used to store and process large amounts of data. In data analysis and machine learning, lists are often used to store datasets.</p>
+</li>
+<li><p>Gaming: Lists are used extensively in game development to store game objects, player statistics, and game maps.</p>
+</li>
+<li><p>Finance: Lists are used in finance to store and process financial data, such as stock prices and market trends. The data from these lists can also be used to calculate financial metrics and to create financial models.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks-(0.3)">Hacks (0.3)<a class="anchor-link" href="#Hacks-(0.3)"> </a></h2><ul>
+<li>Make your own list and manipulate it via accessing specific elements, adding or removing elements, etc.</li>
+<li>Extra: Make an interactable visualization that can manipulate elements in a list such as the one demonstrated in our flask repository</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Iteration-(Alex)">Iteration (Alex)<a class="anchor-link" href="#Iteration-(Alex)"> </a></h2><p>What is iteration?</p>
+<ul>
+<li>In programming, iteration refers to the process of repeating a set of instructions until a specific condition is met. This can be achieved using loop structures like for loops and while loops.</li>
+</ul>
+<p>For Loops</p>
+<ul>
+<li>A for loop is used to iterate over a sequence (e.g. a list, tuple, string, etc.) and execute a set of statements for each item in the sequence. Here's the basic syntax of a for loop in Python:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+4
+5
+6
+7
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>
+
+<span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">my_string</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>H
+e
+l
+l
+o
+,
+ 
+W
+o
+r
+l
+d
+!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>While Loops A while loop is used to repeat a set of statements as long as a condition is true. Here's the basic syntax of a while loop in Python:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+3
+4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Applications-of-Iteration">Applications of Iteration<a class="anchor-link" href="#Applications-of-Iteration"> </a></h2><blockquote><p>Iteration is a fundamental concept in computer programming and is used in a variety of real-life applications. Here are some examples:Data Processing</p>
+<ul>
+<li>Data processing often involves iterating over large datasets to perform specific operations on each element. For example, in a data analysis task, you might iterate over a list of numbers to compute the average, or iterate over a list of strings to find the longest string.</li>
+</ul>
+</blockquote>
+<p>User Interfaces</p>
+<ul>
+<li>User interfaces often involve iteration to display and handle data from various sources. For example, in a web application, you might iterate over a list of users to display their information in a table. Similarly, in a desktop application, you might iterate over a list of files to display them in a file explorer.</li>
+</ul>
+<p>Machine Learning</p>
+<ul>
+<li>Machine learning algorithms often involve iterative processes to train models and improve their accuracy. For example, in a gradient descent algorithm, you might iterate over a set of training data to update the model's parameters and minimize the loss function.</li>
+</ul>
+<h2 id="Popcorn-hack-(0.3)">Popcorn hack (0.3)<a class="anchor-link" href="#Popcorn-hack-(0.3)"> </a></h2><ul>
+<li>Make a list related to your CPT project</li>
+<li>Make a while loop that will print each term in the list</li>
+<li>Make a for loop that will print each term in the list</li>
+</ul>
+<p>Simulation mechanics</p>
+<ul>
+<li>In Python, pop() is a method that is used to remove and return an element from a list. The syntax for using pop() is as follows:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4, 5]
+[1, 2, 3, 4]
+[1, 3, 4]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In Python, append() is a built-in method that is used to add an element to the end of a list. The syntax for using append() is as follows:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Dictionary-Lesson-/-2D-Arrays">Dictionary Lesson / 2D Arrays<a class="anchor-link" href="#Dictionary-Lesson-/-2D-Arrays"> </a></h1><h2 id="Lesson-2:-Dictionary's-and-2-Dimensional-Arrays">Lesson 2: Dictionary's and 2 Dimensional Arrays<a class="anchor-link" href="#Lesson-2:-Dictionary's-and-2-Dimensional-Arrays"> </a></h2><p>Advay Shindikar and Amay Advani</p>
+<h1 id="Objective:">Objective:<a class="anchor-link" href="#Objective:"> </a></h1><ul>
+<li>Understand the concept of dictionaries and how they can be applied</li>
+<li>Learn how to add, modify, and delete entries in a dictionary using the assignment operator and the del keyword</li>
+<li>Understand the concept of 2D arrays and how they can be used to store data in rows and columns</li>
+<li>Learn how to create a 2D array in Python using a nested list</li>
+<li>Understand how to access values in a 2D array using row and column indices</li>
+<li>Learn how to use indexing and slicing to access a subset of a 2D array</li>
+</ul>
+<hr />
+
+<pre><code>student = {'name': 'Advay', 'age': 16, 'Sophomore'}</code></pre>
+
+<pre><code>students = ['advay', 'amay', 'rohin', 'alex', 'ethan']</code></pre>
+<hr />
+<h1 id="Check-In:">Check In:<a class="anchor-link" href="#Check-In:"> </a></h1><ul>
+<li>Of the above code segments, which is a list and which is a dictionary?<blockquote><ul>
+<li>The 2nd students is a list and the 1st one is a dictionary.</li>
+</ul>
+</blockquote>
+</li>
+<li>What is a dictionary and how is it used?<blockquote><ul>
+<li>A dictionary is a 1D array which stores key-value pairs. The keys must be unique to store values.</li>
+</ul>
+</blockquote>
+</li>
+<li>What is a 2D Array?<blockquote><ul>
+<li>A 2D Array is data structure which uses multiple lists to create a multi-dimensional data structure. The 2D Arrays must have rows and columns.</li>
+</ul>
+</blockquote>
+</li>
+<li>How are 2D Arrays different from 1D Arrays or Lists and what can they be used for?<blockquote><ul>
+<li>2D Arrays are different from 1D Arrays or Lists because they require users to input 2 parameters to get a specific value instead of just 1. 2D Arrays can be used for things like games like Tic Tac Toe and representing matrices.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="Manipulating-Dictionaries">Manipulating Dictionaries<a class="anchor-link" href="#Manipulating-Dictionaries"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grocery_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># ask the user to enter grocery items and their prices</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter an item for your grocery list (or &#39;done&#39; to exit): &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="s2">&quot;done&quot;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the price of </span><span class="si">{}</span><span class="s2">: &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="p">)))</span>
+        <span class="n">grocery_dict</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">price</span>
+
+<span class="c1"># print the grocery list and total cost</span>
+<span class="n">total_cost</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your grocery list:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span><span class="p">,</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">grocery_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- </span><span class="si">{}</span><span class="s2">: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">price</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total cost: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total_cost</span><span class="p">))</span>
+    
+    <span class="c1"># ask the user to choose an action</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What would you like to do? (add/remove/done) &quot;</span><span class="p">)</span>
+    
+    <span class="c1"># add a new item to the grocery list</span>
+    <span class="k">if</span> <span class="n">action</span> <span class="o">==</span> <span class="s2">&quot;add&quot;</span><span class="p">:</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the name of the item you would like to add: &quot;</span><span class="p">)</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the price of </span><span class="si">{}</span><span class="s2">: &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="p">)))</span>
+        <span class="n">grocery_dict</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">price</span>
+        <span class="n">total_cost</span> <span class="o">+=</span> <span class="n">price</span>
+    
+    <span class="c1"># remove an item from the           j</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the name of the item you would like to remove: &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">grocery_dict</span><span class="p">:</span>
+            <span class="n">total_cost</span> <span class="o">-=</span> <span class="n">grocery_dict</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">grocery_dict</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Item not found in grocery list!&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># exit the loop and print the final grocery list and total cost</span>
+    <span class="k">elif</span> <span class="n">action</span> <span class="o">==</span> <span class="s2">&quot;done&quot;</span><span class="p">:</span>
+        <span class="k">break</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final grocery list:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span><span class="p">,</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">grocery_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- </span><span class="si">{}</span><span class="s2">: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">price</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total cost: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total_cost</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="HACKS">HACKS<a class="anchor-link" href="#HACKS"> </a></h2><ul>
+<li>dictionary hacks</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">final_grades</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">num_students</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the number of students: &quot;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_students</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the name of student </span><span class="si">{}</span><span class="s2">: &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the final grade for </span><span class="si">{}</span><span class="s2">: &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)))</span>
+    <span class="n">final_grades</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">grade</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final grades:&quot;</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">student</span><span class="p">,</span> <span class="n">grade</span> <span class="ow">in</span> <span class="n">final_grades</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">student</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">grade</span><span class="p">))</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">grade</span>
+
+<span class="n">average</span> <span class="o">=</span> <span class="n">total</span> <span class="o">/</span> <span class="n">num_students</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average grade: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">average</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Final grades:
+Aditya: 98
+Sike: 60
+Average grade: 79.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>list hacks</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;milk&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;pasta&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;eggs&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;spam&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;bread&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;rice&quot;</span>
+                 <span class="p">]</span>
+
+<span class="c1">## adding another item</span>
+<span class="k">def</span> <span class="nf">add</span> <span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;add what?&quot;</span><span class="p">)</span>
+    <span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sample_list</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;remove what?&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
+            <span class="nb">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">sample_list</span><span class="p">)</span>
+            <span class="k">break</span>
+
+<span class="k">def</span> <span class="nf">select</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;given and index number&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">user</span><span class="p">)])</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">first</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;what&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">first</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;add&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;adding&quot;</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="n">sample_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>adding
+[&#39;milk&#39;, &#39;pasta&#39;, &#39;eggs&#39;, &#39;spam&#39;, &#39;bread&#39;, &#39;rice&#39;, &#39;cheese&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">first</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;what&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sample_list</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">first</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;remove&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;removing&quot;</span><span class="p">)</span>
+    <span class="n">remove</span><span class="p">(</span><span class="n">sample_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;milk&#39;, &#39;pasta&#39;, &#39;eggs&#39;, &#39;spam&#39;, &#39;bread&#39;, &#39;rice&#39;, &#39;cheese&#39;]
+removing
+[&#39;milk&#39;, &#39;pasta&#39;, &#39;eggs&#39;, &#39;spam&#39;, &#39;bread&#39;, &#39;rice&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">first</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;what&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">first</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;select&quot;</span><span class="p">:</span>
+    <span class="n">select</span><span class="p">(</span><span class="n">sample_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>pasta
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>2D arrays hacks</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># Define the dimensions of the checkerboard and the image</span>
+<span class="n">size</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">width</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">size</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">size</span>
+
+<span class="c1"># Create a new image with the same dimensions as the checkerboard</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>
+
+<span class="c1"># Set the pixel values of the image to random colors based on the checkerboard pattern</span>
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">//</span> <span class="n">size</span> <span class="o">+</span> <span class="n">y</span> <span class="o">//</span> <span class="n">size</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">pixel</span> <span class="o">=</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pixel</span> <span class="o">=</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">127</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">127</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+        <span class="n">image</span><span class="o">.</span><span class="n">putpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">pixel</span><span class="p">)</span>
+
+<span class="c1"># Save the image as a PNG file and show it</span>
+<span class="n">image</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;checkerboard.png&quot;</span><span class="p">)</span>
+<span class="n">image</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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" />
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Popcorn hacks</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CPT_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Tesla&quot;</span><span class="p">,</span> <span class="s2">&quot;Rivian&quot;</span><span class="p">,</span> <span class="s2">&quot;NIO&quot;</span><span class="p">,</span> <span class="s2">&quot;lucid&quot;</span><span class="p">]</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="k">while</span><span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">CPT_list</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tesla
+Rivian
+NIO
+lucid
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span><span class="p">(</span><span class="n">num2</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">CPT_list</span><span class="p">[</span><span class="n">num2</span><span class="p">])</span>
+    <span class="n">num2</span> <span class="o">=</span> <span class="n">num2</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tesla
+Rivian
+NIO
+lucid
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Explanation-Hacks">Explanation Hacks<a class="anchor-link" href="#Explanation-Hacks"> </a></h3><p>set up a variable num to value 0
+I first make a while loop with condition being num is smaller than 4, so that it runs 4 times
+I then make a for loop to iterate through the CPT list and print each value as it iterates through it</p>
+<h3 id="Explanation-Hacks">Explanation Hacks<a class="anchor-link" href="#Explanation-Hacks"> </a></h3><p>set up a variable num2 t value 0
+then I make a while loop to run the command 4 times and output the value of the list CPT_list at the index value of the value of num2</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/CSPrepository2/2023/04/27/P4M-DataStructures-TeamEAAR.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CSPrepository2/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://firestorm0986.github.io/CSPrepository2/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CSPrepository2/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My Portfolio for APCSP</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
