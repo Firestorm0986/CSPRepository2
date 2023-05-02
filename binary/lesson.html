@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -196,21 +196,21 @@ window.onload = wrap_img;
 <a class="anchor" href="#Binary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary<a class="anchor-link" href="#Binary"> </a>
 </h2>
 <ol>
-<li>Binary is a base ___ number system.</li>
-<li>0 represents <strong><strong> and 1 represents </strong></strong>.</li>
-<li>A <em>__</em> is the minimum unit of binary information stored in a computer system.</li>
+<li>Binary is a base <em>2</em> number system.</li>
+<li>0 represents <em>off</em> and 1 represents <em>on</em>.</li>
+<li>A <strong>bit</strong> is the minimum unit of binary information stored in a computer system.</li>
 </ol>
 <h2 id="Boolean-Expressions">
 <a class="anchor" href="#Boolean-Expressions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boolean Expressions<a class="anchor-link" href="#Boolean-Expressions"> </a>
 </h2>
 <ol>
-<li>A <strong>_</strong> <strong>___</strong> is a logical statement that is either TRUE or FALSE and compares data.</li>
+<li>A <strong>boolean</strong> <strong>expression</strong> is a logical statement that is either TRUE or FALSE and compares data.</li>
 </ol>
 <h2 id="Truth-Tables">
 <a class="anchor" href="#Truth-Tables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Truth Tables<a class="anchor-link" href="#Truth-Tables"> </a>
 </h2>
 <ol>
-<li>The logical operations shown in truth tables are <strong><em>, </em></strong>, <strong><em>, and </em></strong>.</li>
+<li>The logical operations shown in truth tables are _not<strong>, _and</strong>, _<em>or</em>, and <em>xor</em>.</li>
 </ol>
 
 </div>
@@ -407,19 +407,19 @@ window.onload = wrap_img;
 <a class="anchor" href="#Binary-to-Decimal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary to Decimal<a class="anchor-link" href="#Binary-to-Decimal"> </a>
 </h3>
 <ol>
-<li>We can count in binary by using powers of <em>__</em>.</li>
-<li>In binary, we read from <strong><strong> to </strong></strong>.</li>
-<li>0111 has a value of <em>__</em>.</li>
+<li>We can count in binary by using powers of <strong>2</strong>.</li>
+<li>In binary, we read from <strong>right</strong> to <strong>left</strong>.</li>
+<li>0111 has a value of <strong>7</strong>.</li>
 </ol>
 <h3 id="Binary-Search">
 <a class="anchor" href="#Binary-Search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Search<a class="anchor-link" href="#Binary-Search"> </a>
 </h3>
 <ol>
-<li>For a binary search, the list must be <strong>_</strong>. </li>
-<li>In a binary search, computers start at the <strong>_</strong>(front,middle,end)/</li>
-<li>The number of steps required in a binary search follows the equation: <strong>_</strong>.</li>
-<li>Binary searches also work with a list of <em>__</em>. We can sort them alphabetically.</li>
-<li>Binary searches can be represented in <strong>__</strong> diagrams.</li>
+<li>For a binary search, the list must be <strong>_Sorted</strong>. </li>
+<li>In a binary search, computers start at the <strong>_middle</strong>(front,middle,end)/</li>
+<li>The number of steps required in a binary search follows the equation: <strong>log2(n) + 1</strong>.</li>
+<li>Binary searches also work with a list of <strong>strings</strong>. We can sort them alphabetically.</li>
+<li>Binary searches can be represented in <strong>tree_</strong> diagrams.</li>
 </ol>
 
 </div>
@@ -465,10 +465,30 @@ window.onload = wrap_img;
 <a class="anchor" href="#Binary-Conversions-Practice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Conversions Practice<a class="anchor-link" href="#Binary-Conversions-Practice"> </a>
 </h3>
 <ol>
-<li>Convert the decimal number "17" into binary.</li>
-<li>Convert the binary number 1010 into decimal.</li>
-<li>Convert the decimal number "122" into hexadecimal.</li>
-<li>Convert the hexadecimal number "09" into binary.</li>
+<li>Convert the decimal number "17" into binary.<blockquote>
+<ul>
+<li>010001</li>
+</ul>
+</blockquote>
+</li>
+<li>Convert the binary number 1010 into decimal.<blockquote>
+<ul>
+<li>2^3 1 + 2^2 0 + 2^1 1 + 2^0 0 = 10</li>
+</ul>
+</blockquote>
+</li>
+<li>Convert the decimal number "122" into hexadecimal.<blockquote>
+<ul>
+<li>7A</li>
+</ul>
+</blockquote>
+</li>
+<li>Convert the hexadecimal number "09" into binary.<blockquote>
+<ul>
+<li>The hexadecimal number 09 in binary is 1001</li>
+</ul>
+</blockquote>
+</li>
 </ol>
 
 </div>
@@ -482,9 +502,103 @@ window.onload = wrap_img;
 </h3>
 <ol>
 <li>Make a binary search tree of different the list [1,2,4,15,25,30,31]</li>
-<li>Put this list of strings in a order that can be used for binary search ["Donut”,"Cake”,"Soda”,"Banana”,"Fruit”]</li>
-<li>Explain why Binary Search is more efficient than Sequential Search.</li>
+<li>Put this list of strings in a order that can be used for binary search ["Donut”,"Cake”,"Soda”,"Banana”,"Fruit”]<blockquote>
+<ul>
+<li>["Banana", "Cake", "Donut", "Fruit", "Soda"]</li>
+</ul>
+</blockquote>
+</li>
+<li>Explain why Binary Search is more efficient than Sequential Search.<blockquote>
+<ul>
+<li>Binary search is more efficient than sequential search because it takes advantage of the fact that the input data is already sorted. It works by repeatedly dividing the search interval in half until the target value is found or it's determined that the target value is not in the array.</li>
+<li>sequential search involves iterating over each element in the array and comparing it to the target value until the target is found or the end of the array is reached. This means that sequential search has a time complexity of O(n), where n is the size of the array. In contrast, binary search has a time complexity of O(log n), which means that it can search a much larger array in fewer steps. This makes binary search much faster than sequential search for large arrays.</li>
+</ul>
+</blockquote>
+</li>
 </ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># using built-in python function</span>
+<span class="k">def</span> <span class="nf">decimalToBinary</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># converting decimal to binary</span>
+    <span class="c1"># and removing the prefix(0b)</span>
+    <span class="k">return</span> <span class="nb">bin</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"0b"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">numberTobinary</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+   
+    
+<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Please input a number "</span><span class="p">))</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">decimalToBinary</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"binary conversion is: "</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hexadecial conversion is: "</span><span class="p">,</span> <span class="nb">hex</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>
+    <span class="k">break</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Please input a binary value: "</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"binary to number conversion is: "</span><span class="p">,</span> <span class="n">numberTobinary</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+
+<span class="c1">#for i in range(1,256):</span>
+ <span class="c1">#   print(decimalToBinary(i))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>binary conversion is:  010001
+Hexadecial conversion is:  0x2711
+122
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-04-28-Binary-Lesson-Runtimeterror.ipynb Cell 14</span> in <span class="ansi-cyan-fg">&lt;cell line: 22&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-04-28-Binary-Lesson-Runtimeterror.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=19'&gt;20&lt;/a&gt;</span> m = input("Please input a binary value: ")
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-04-28-Binary-Lesson-Runtimeterror.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=20'&gt;21&lt;/a&gt;</span> print(m)
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-04-28-Binary-Lesson-Runtimeterror.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=21'&gt;22&lt;/a&gt;</span> print("binary to number conversion is: ", numberTobinary(m))
+
+<span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-04-28-Binary-Lesson-Runtimeterror.ipynb Cell 14</span> in <span class="ansi-cyan-fg">numberTobinary</span><span class="ansi-blue-fg">(y)</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-04-28-Binary-Lesson-Runtimeterror.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> def numberTobinary(y):
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2023-04-28-Binary-Lesson-Runtimeterror.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span>     return int(y, 2)
+
+<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 2: '122'</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://user-images.githubusercontent.com/108041389/235775709-2647bf9f-fbf5-495a-aa7a-2f2bf3cb0458.png" alt="image"></p>
 
 </div>
 </div>
@@ -497,7 +611,10 @@ window.onload = wrap_img;
 </h3>
 <ul>
 <li>Translate the binary number, 1001010, into octal (base 8). <mark>SHOW YOUR WORK AND EXPLAIN YOUR THINKING.</mark>
-OR</li>
+2+8+64 = 74</li>
+</ul>
+<p>OR</p>
+<ul>
 <li>write the best rap line (determined during the lesson by group)</li>
 </ul>
 
