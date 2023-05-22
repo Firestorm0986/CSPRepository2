@@ -1,8 +1,10 @@
 ---
-title: Bug Animations
+toc: true
 comments: true
-layout: base
-description: Display bug animations and trigger them with a button click.
+layout: post
+title: Bugs
+description: bugs
+categories: []
 image: images/bugs.png
 ---
 
