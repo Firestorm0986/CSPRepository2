@@ -281,10 +281,10 @@ window.onload = wrap_img;
 
 
 
-<div id="0ce514e1-c6a2-4488-b689-42c0ff7027d1"></div>
+<div id="2e29c04f-5ce1-466e-af07-a4e897788c76"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#0ce514e1-c6a2-4488-b689-42c0ff7027d1');
+var element = $('#2e29c04f-5ce1-466e-af07-a4e897788c76');
 console.log("JavaScript/Jupyter Output Intro");
 
 // Browser Console output; debugging or tracing
@@ -357,10 +357,10 @@ element.append('<br><b>Hello World Again!');
 
 
 
-<div id="09ba5a19-b23a-4032-aa6b-f6f6af0343fb"></div>
+<div id="ecaeef21-7c8a-438f-ab1b-2ee2edc7cf28"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#09ba5a19-b23a-4032-aa6b-f6f6af0343fb');
+var element = $('#ecaeef21-7c8a-438f-ab1b-2ee2edc7cf28');
 console.log("Variable Definition");
 
 var msg = "Hello, World!";
@@ -442,10 +442,10 @@ element.text(msg);
 
 
 
-<div id="ea5f75d2-da9d-4686-95f6-b573faf210a2"></div>
+<div id="a48813b2-73a2-4c6c-a6e0-d6738b71bf36"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#ea5f75d2-da9d-4686-95f6-b573faf210a2');
+var element = $('#a48813b2-73a2-4c6c-a6e0-d6738b71bf36');
 console.log("Function Definition");
 
 /* Function: logIt
@@ -553,10 +553,10 @@ logIt(msg + "  " + classOf); // concatenation of strings
 
 
 
-<div id="90b2f3cd-aea5-4fbb-8ac2-060126a00abc"></div>
+<div id="c96e8d72-96c7-4a06-9b03-1bf3d32ac0a9"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#90b2f3cd-aea5-4fbb-8ac2-060126a00abc');
+var element = $('#c96e8d72-96c7-4a06-9b03-1bf3d32ac0a9');
 console.log("Examine Data Types");
 
 // Function to add typeof to output
@@ -803,10 +803,10 @@ logIt(JSON.stringify(person));  //method used to convert this object into readab
 
 
 
-<div id="240e1211-ee87-42b0-bcdc-d6abe18af3ba"></div>
+<div id="e5ba51e3-0e8e-45ca-a923-36242d5f895a"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#240e1211-ee87-42b0-bcdc-d6abe18af3ba');
+var element = $('#e5ba51e3-0e8e-45ca-a923-36242d5f895a');
 console.log("Person objects");
 
 /* class: Person
@@ -1024,10 +1024,10 @@ student.logIt(); // log to console
 
 
 
-<div id="6ce30767-5a87-4cd1-a30c-dedf72c7319d"></div>
+<div id="b3360fce-8973-456e-978d-209db390ff3d"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#6ce30767-5a87-4cd1-a30c-dedf72c7319d');
+var element = $('#b3360fce-8973-456e-978d-209db390ff3d');
 console.log("Classroom object");
 
 /* class: Person
@@ -1216,10 +1216,10 @@ $('#jsonText').text(compsci.json);  // posts/embeds/writes compsci.json to HTML 
 
 
 
-<div id="f4dc582b-9408-4247-b3e5-848db9381bbf"></div>
+<div id="d99e552d-cc30-4906-9b9b-7202298276bf"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#f4dc582b-9408-4247-b3e5-848db9381bbf');
+var element = $('#d99e552d-cc30-4906-9b9b-7202298276bf');
 console.log("Classroom Web Page");
 
 // extract JSON text from HTML page
@@ -1394,6 +1394,102 @@ for (var row of classroom) {
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%js</span>
+<span class="c1">// Parent class</span>
+<span class="kd">function</span> <span class="nx">Shape</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Method in the parent class</span>
+<span class="nx">Shape</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getColor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// Child class inheriting from Shape</span>
+<span class="kd">function</span> <span class="nx">Rectangle</span><span class="p">(</span><span class="nx">color</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">Shape</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">color</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">width</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">height</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Inheriting methods from Shape</span>
+<span class="nx">Rectangle</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Shape</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
+<span class="nx">Rectangle</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">Rectangle</span><span class="p">;</span>
+
+<span class="c1">// Adding a method specific to Rectangle</span>
+<span class="nx">Rectangle</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getArea</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">width</span> <span class="o">*</span> <span class="k">this</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">rect</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Rectangle</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="mf">5</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rect</span><span class="p">.</span><span class="nx">getColor</span><span class="p">());</span> <span class="c1">// Output: &quot;blue&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rect</span><span class="p">.</span><span class="nx">getArea</span><span class="p">());</span> <span class="c1">// Output: 50</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+
+<div id="70a914ed-6524-41cc-9b05-62c291dd68d9"></div>
+<div class="output_subarea output_javascript ">
+<script type="text/javascript">
+var element = $('#70a914ed-6524-41cc-9b05-62c291dd68d9');
+// Parent class
+function Shape(color) {
+  this.color = color;
+}
+
+// Method in the parent class
+Shape.prototype.getColor = function() {
+  return this.color;
+};
+
+// Child class inheriting from Shape
+function Rectangle(color, width, height) {
+  Shape.call(this, color);
+  this.width = width;
+  this.height = height;
+}
+
+// Inheriting methods from Shape
+Rectangle.prototype = Object.create(Shape.prototype);
+Rectangle.prototype.constructor = Rectangle;
+
+// Adding a method specific to Rectangle
+Rectangle.prototype.getArea = function() {
+  return this.width * this.height;
+};
+
+var rect = new Rectangle("blue", 5, 10);
+console.log(rect.getColor()); // Output: "blue"
+console.log(rect.getArea()); // Output: 50
+
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
