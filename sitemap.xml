@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://firestorm0986.github.io/CSPrepository2/frontend/mario</loc>
+<lastmod>2022-07-19T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://firestorm0986.github.io/CSPrepository2/markdown/week-0/2022/08/21/My-First-Blog-Post.html</loc>
 <lastmod>2022-08-21T00:00:00-05:00</lastmod>
 </url>
@@ -241,6 +245,14 @@
 <lastmod>2023-04-28T00:00:00-05:00</lastmod>
 </url>
 <url>
+<loc>https://firestorm0986.github.io/CSPrepository2/techtalk/javascript</loc>
+<lastmod>2023-05-11T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://firestorm0986.github.io/CSPrepository2/1.d/2.b/3.b/c3.1/2023/05/16/DS-arrays_lab.html</loc>
+<lastmod>2023-05-16T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://firestorm0986.github.io/CSPrepository2/about/</loc>
 </url>
 <url>
@@ -275,5 +287,8 @@
 </url>
 <url>
 <loc>https://firestorm0986.github.io/CSPrepository2/page4/</loc>
+</url>
+<url>
+<loc>https://firestorm0986.github.io/CSPrepository2/page5/</loc>
 </url>
 </urlset>
