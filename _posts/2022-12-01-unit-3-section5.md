@@ -263,10 +263,28 @@ if age &gt;= 18:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>binary conversion is:  0101
-Hexadecial conversion is:  0x65
-binary to number conversion is:  11
+<pre>binary conversion is:  010001
+Hexadecial conversion is:  0x2711
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2022-12-01-unit-3-section5.ipynb Cell 9</span> in <span class="ansi-cyan-fg">&lt;cell line: 21&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2022-12-01-unit-3-section5.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=17&#39;&gt;18&lt;/a&gt;</span>     break
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2022-12-01-unit-3-section5.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=19&#39;&gt;20&lt;/a&gt;</span> m = input(&#34;Please input a binary value: &#34;)
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2022-12-01-unit-3-section5.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=20&#39;&gt;21&lt;/a&gt;</span> print(&#34;binary to number conversion is: &#34;, numberTobinary(m))
+
+<span class="ansi-green-intense-fg ansi-bold">/home/aditya_nav/vscode/CSPrepository2/_notebooks/2022-12-01-unit-3-section5.ipynb Cell 9</span> in <span class="ansi-cyan-fg">numberTobinary</span><span class="ansi-blue-fg">(y)</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2022-12-01-unit-3-section5.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span> def numberTobinary(y):
+<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/aditya_nav/vscode/CSPrepository2/_notebooks/2022-12-01-unit-3-section5.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span>     return int(y, 2)
+
+<span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 2: &#39;&#39;</pre>
 </div>
 </div>
 

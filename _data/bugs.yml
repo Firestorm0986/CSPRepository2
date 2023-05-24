@@ -1,14 +1,6 @@
-- id: bug1
+- WalkingBug1:
   row: 0
   col: 0
-  frames: 2
+  frames: 5
 
-- id: bug2
-  row: 0
-  col: 1
-  frames: 2
 
-- id: bug3
-  row: 1
-  col: 0
-  frames: 1

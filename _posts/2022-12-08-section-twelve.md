@@ -52,9 +52,8 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">function</span> <span class="n">convert</span><span class="p">(</span><span class="n">inti</span><span class="p">){</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">function</span> <span class="n">convert</span><span class="p">(</span><span class="n">inti</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">inti</span><span class="p">)</span><span class="o">.</span><span class="n">toString</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="p">}</span>
 
 <span class="n">decimal</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">convert</span><span class="p">(</span><span class="n">decimal</span><span class="p">))</span>
@@ -69,8 +68,12 @@ layout: notebook
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>111
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  Input </span><span class="ansi-green-fg">In [2]</span>
+<span class="ansi-red-fg">    function convert(inti) {</span>
+             ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
 </pre>
 </div>
 </div>
