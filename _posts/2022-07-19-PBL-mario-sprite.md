@@ -10,7 +10,7 @@ tags: [javascript]
 ---
 <!-- Hack 1: find your own sprite -->
 <!-- Hack 2: make you own sprite display -->
-<!-- Hack 3: come up with a new event or sequence, reference: https://developer.mozilla.org/en-US/docs/Web/API/Element/mousedown_event-->
+<!-- Hack 3: come up with a new event or sequence, reference: https://devel oper.mozilla.org/en-US/docs/Web/API/Element/mousedown_event-->
 
 
 
